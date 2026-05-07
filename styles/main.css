@@ -84,8 +84,8 @@ h1 {
     font-weight: 400;
     font-kerning: normal;
     text-rendering: optimizeLegibility;
-    line-height: 0.95;
     letter-spacing: -0.025em;
+    line-height: 0.95;
 }
 
 .motto {
