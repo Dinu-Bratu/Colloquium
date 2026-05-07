@@ -82,8 +82,10 @@ h1 {
     color: var(--text);
     font-size: clamp(3.35rem, 10vw, 6.25rem);
     font-weight: 400;
+    font-kerning: normal;
+    text-rendering: optimizeLegibility;
     line-height: 0.95;
-    letter-spacing: 0.015em;
+    letter-spacing: -0.025em;
 }
 
 .motto {
