@@ -153,9 +153,14 @@ footer {
     border-bottom-color: var(--text);
 }
 
-.footer-nav span {
-    margin: 0 1.1em;
+.footer-separator {
+    margin: 0 0.75rem;
     color: var(--muted);
+}
+
+.footer-current {
+    color: var(--muted);
+    cursor: default;
 }
 
 .home-footer-nav {
@@ -195,6 +200,22 @@ footer {
     color: var(--accent);
 }
 
+.section-subtitle {
+    color: var(--muted);
+    font-size: 0.72em;
+    font-variant: small-caps;
+    letter-spacing: 0.08em;
+    opacity: 0.78;
+}
+
+.section-subtitle::before {
+    content: " — ";
+    color: var(--rule);
+    font-variant: normal;
+    letter-spacing: normal;
+    opacity: 1;
+}
+
 .contact-email {
     margin-top: 2em;
     text-align: center;
@@ -210,6 +231,11 @@ footer {
 .contact-email a:hover {
     color: var(--text);
     border-bottom-color: var(--text);
+}
+
+.footer-current {
+    color: var(--muted);
+    cursor: default;
 }
 
 /* =========================================================
