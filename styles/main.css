@@ -35,14 +35,10 @@ body {
     padding: 56px 24px;
 }
 
-.page-container {
-    min-height: 100vh;
-    padding: 56px 24px;
-}
-
 .container {
     width: 100%;
     max-width: var(--max-width);
+    margin: 0 auto;
 }
 
 header {
@@ -138,12 +134,41 @@ footer {
 }
 
 /* =========================================================
+   Shared Footer Navigation
+========================================================= */
+
+.footer-nav {
+    text-align: center;
+}
+
+.footer-nav a,
+.footer-nav a:visited {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+}
+
+.footer-nav a:hover {
+    color: var(--text);
+    border-bottom-color: var(--text);
+}
+
+.footer-nav span {
+    margin: 0 1.1em;
+    color: var(--muted);
+}
+
+.home-footer-nav {
+    margin-top: 1.0rem;
+    margin-bottom: 1.0rem;
+}
+
+/* =========================================================
    Interior Pages
 ========================================================= */
 
 .interior-page {
     align-items: flex-start;
-    padding: 56px 24px;
 }
 
 .interior-masthead {
@@ -151,14 +176,23 @@ footer {
     text-align: center;
     font-size: clamp(1.8rem, 5vw, 2.6rem);
     font-weight: 400;
+    font-kerning: normal;
+    text-rendering: optimizeLegibility;
     letter-spacing: -0.02em;
     line-height: 1;
     padding-top: 24px;
 }
 
 .interior-content {
-    max-width: 680px;
-    margin: 0 auto;
+    max-width: none;
+}
+
+.page-title {
+    margin: 0 0 1.5em;
+    text-align: center;
+    font-size: 1.55rem;
+    font-weight: 400;
+    color: var(--accent);
 }
 
 .contact-email {
@@ -178,127 +212,51 @@ footer {
     border-bottom-color: var(--text);
 }
 
-.footer-nav span {
-    margin: 0 0.5em;
-    color: var(--muted);
-}
-
-.interior-page {
-    align-items: flex-start;
-}
-
-.interior-masthead {
-    margin: 0;
-    text-align: center;
-    font-size: clamp(1.8rem, 5vw, 2.6rem);
-    font-weight: 400;
-    letter-spacing: -0.02em;
-    line-height: 1;
-}
-
-.interior-masthead a {
-    color: var(--text);
-    text-decoration: none;
-}
-
-.interior-masthead a:hover {
-    color: var(--accent);
-}
-
-.interior-masthead a,
-.interior-masthead a:visited {
-    color: var(--text);
-    text-decoration: none;
-}
-
-.interior-masthead a:hover {
-    color: var(--accent);
-}
-
-.interior-content {
-    max-width: 680px;
-}
-
-.page-title {
-    margin: 0 0 1.5em;
-    text-align: center;
-    font-size: 1.55rem;
-    font-weight: 400;
-    color: var(--accent);
-}
-
-.contact-email {
-    margin-top: 2em;
-    text-align: center;
-}
-
-.contact-email a,
-.footer-nav a {
-    color: var(--accent);
-    text-decoration: none;
-    border-bottom: 1px solid var(--rule);
-}
-
-.contact-email a:hover,
-.footer-nav a:hover {
-    color: var(--text);
-    border-bottom-color: var(--text);
-}
-
-.footer-nav a,
-.footer-nav a:visited {
-    color: var(--accent);
-    text-decoration: none;
-    border-bottom: 1px solid var(--rule);
-}
-
-.footer-nav span {
-    margin: 0 0.5em;
-    color: var(--muted);
-}
-
-.home-footer-nav {
-    margin-top: 3.5rem;
-    text-align: center;
-}
+/* =========================================================
+   Responsive
+========================================================= */
 
 @media (max-width: 640px) {
     body {
-    font-size: 17px;
-    line-height: 1.6;
+        font-size: 17px;
+        line-height: 1.6;
     }
 
     .page {
-    align-items: flex-start;
-    padding: 42px 20px;
+        align-items: flex-start;
+        padding: 42px 20px;
     }
 
     header {
-    margin-bottom: 34px;
+        margin-bottom: 34px;
     }
 
     .rule {
-    margin-bottom: 24px;
+        margin-bottom: 24px;
     }
 
     .rule.bottom {
-    margin-top: 26px;
+        margin-top: 26px;
     }
 
     .brand-seal {
-    margin-bottom: 16px;
+        margin-bottom: 16px;
     }
 
     .brand-seal img {
-    width: 76px;
+        width: 76px;
     }
 
     .welcome,
     .date {
-    font-size: 0.76rem;
+        font-size: 0.76rem;
+    }
+
+    .interior-masthead {
+        padding-top: 12px;
     }
 
     footer {
-    margin-top: 40px;
+        margin-top: 40px;
     }
 }
