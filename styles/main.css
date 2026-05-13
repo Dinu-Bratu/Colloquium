@@ -200,6 +200,16 @@ footer {
     color: var(--accent);
 }
 
+.page-title-with-subtitle {
+    margin-bottom: 0.25em;
+}
+
+.section-subtitle-stacked {
+    margin: 0 0 2.25em;
+    text-align: center;
+    display: block;
+}
+
 .section-subtitle {
     color: var(--muted);
     font-size: 0.72em;
@@ -209,7 +219,6 @@ footer {
 }
 
 .section-subtitle::before {
-    content: " — ";
     color: var(--rule);
     font-variant: normal;
     letter-spacing: normal;
