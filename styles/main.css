@@ -132,6 +132,130 @@ footer {
     letter-spacing: 0.04em;
 }
 
+/* =========================================================
+   Interior Pages
+========================================================= */
+
+.interior-page {
+    align-items: flex-start;
+}
+
+.interior-masthead {
+    margin: 0;
+    text-align: center;
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    padding-top: 24px;
+}
+
+.interior-content {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.contact-email {
+    margin-top: 2em;
+    text-align: center;
+}
+
+.contact-email a,
+.contact-email a:visited {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+}
+
+.contact-email a:hover {
+    color: var(--text);
+    border-bottom-color: var(--text);
+}
+
+.footer-nav span {
+    margin: 0 0.5em;
+    color: var(--muted);
+}
+
+.interior-page {
+    align-items: flex-start;
+}
+
+.interior-masthead {
+    margin: 0;
+    text-align: center;
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1;
+}
+
+.interior-masthead a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.interior-masthead a:hover {
+    color: var(--accent);
+}
+
+.interior-masthead a,
+.interior-masthead a:visited {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.interior-masthead a:hover {
+    color: var(--accent);
+}
+
+.interior-content {
+    max-width: 680px;
+}
+
+.page-title {
+    margin: 0 0 1.5em;
+    text-align: center;
+    font-size: 1.55rem;
+    font-weight: 400;
+    color: var(--accent);
+}
+
+.contact-email {
+    margin-top: 2em;
+    text-align: center;
+}
+
+.contact-email a,
+.footer-nav a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+}
+
+.contact-email a:hover,
+.footer-nav a:hover {
+    color: var(--text);
+    border-bottom-color: var(--text);
+}
+
+.footer-nav a,
+.footer-nav a:visited {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+}
+
+.footer-nav span {
+    /* margin: 0 0.5em; */
+    color: var(--muted);
+}
+
+.home-footer-nav {
+    /* margin-top: 3.5rem; */
+    text-align: center;
+}
+
 @media (max-width: 640px) {
     body {
     font-size: 17px;
