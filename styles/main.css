@@ -19,6 +19,10 @@
     display: none;
 }
 
+.no-break {
+    white-space: nowrap;
+}
+
 html {
     min-height: 100%;
 }
@@ -226,7 +230,7 @@ main {
 
 .section-subtitle {
     color: var(--muted);
-    font-size: 0.72em;
+    font-size: 0.85em;
     font-variant: small-caps;
     letter-spacing: 0.08em;
     opacity: 0.78;
@@ -309,6 +313,7 @@ main {
 
 .article-tags {
     margin-top: 1.75em;
+    text-align: left;
 }
 
 .article-tags-title {
@@ -332,11 +337,14 @@ p.article-tags-title {
 
 .article-tag {
     display: inline-block;
-    margin-right: 0.75em;
     margin-bottom: 0.4em;
     color: var(--muted);
 }
 
+.article-tag + .article-tag::before {
+    content: " | ";
+    color: var(--muted);
+}
 
 /* Styles for Long-Form Articles */
 
@@ -394,7 +402,26 @@ footer {
 
 .footer-current {
     color: var(--muted);
+    opacity: 0.75;
     cursor: default;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+.footer-nav {
+    text-align: center;
+}
+
+.footer-current {
+    color: var(--muted);
+    cursor: default;
+}
+
+.footer-separator {
+    margin: 0 0.5em;
+    color: var(--muted);
 }
 
 .footer-nav a,
@@ -407,16 +434,6 @@ footer {
 .footer-nav a:hover {
     color: var(--text);
     border-bottom-color: var(--text);
-}
-
-.footer-nav span {
-    margin: 0 0.5em;
-    color: var(--muted);
-}
-
-.footer-separator {
-    margin: 0 0.75rem;
-    color: var(--muted);
 }
 
 .home-footer-nav {
