@@ -123,7 +123,7 @@ header {
 
 .masthead-divider {
     position: relative;
-    height: 12px;
+    height: 1px; 
     margin: 0 0 3em;
 }
 
@@ -252,7 +252,7 @@ main {
 .article-title {
     margin: 0 0 0.6em;
     text-align: center;
-    font-size: clamp(1.35rem, 3.7vw, 1.95rem);
+    font-size: clamp(1.35rem, 3.7vw, 1.55rem);
     font-weight: 400;
     line-height: 1.15;
     color: var(--text);
@@ -285,11 +285,12 @@ main {
 }
 
 .article-meta {
-    margin-top: 3.5em;
+    margin-top: 1em;
+    border-top: none;
 }
 
 .article-version {
-    text-align: center;
+    text-align: left;
     color: var(--muted);
 }
 
@@ -298,7 +299,7 @@ main {
 }
 
 .article-provenance {
-    text-align: center;
+    text-align: left;
 }
 
 .article-provenance p {
@@ -311,23 +312,31 @@ main {
 }
 
 .article-tags-title {
-    margin-bottom: 0.5em;
-    font-size: 0.92rem;
-    font-weight: 700;
-    color: var(--text);
+    color: var(--muted);
+}
+
+p.article-tags-title {
+    margin: 0;
+    line-height: 1.4;
+}
+
+p.article-tags-title {
+    text-align: left;
 }
 
 .article-tag-list {
     margin: 0;
+    text-align: left;
+    line-height: 1.4;
 }
 
 .article-tag {
     display: inline-block;
     margin-right: 0.75em;
     margin-bottom: 0.4em;
-    font-size: 0.9rem;
-    color: var(--accent);
+    color: var(--muted);
 }
+
 
 /* For Long-Form Articles */
 
@@ -348,16 +357,18 @@ main {
     color: var(--muted);
 }
 
-.article-insert-quote {
+.article-inset-quote {
     max-width: 42rem;
     margin: 0 auto 1.275em;
+    padding-left: 2rem;
+    padding-right: 2rem;
     font-size: 1.0rem;
     line-height: 1.7;
     font-style: italic;
     color: var(--muted);
 }
 
-.article-insert-quote-source {
+.article-inset-quote-source {
     display: block;
     margin-top: 0.75em;
     font-style: italic;
