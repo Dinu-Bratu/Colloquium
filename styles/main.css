@@ -298,6 +298,21 @@ footer {
     color: var(--muted);
 }
 
+.article-insert-quote {
+    max-width: 42rem;
+    margin: 0 auto 1.275em;
+    font-size: 1.0rem;
+    line-height: 1.7;
+    font-style: italic;
+    color: var(--muted);
+}
+
+.article-insert-quote-source {
+    display: block;
+    margin-top: 0.75em;
+    font-style: italic;
+}
+
 /* =========================================================
    Interior Pages
 ========================================================= */
