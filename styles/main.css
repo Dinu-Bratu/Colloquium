@@ -220,10 +220,8 @@ main {
     color: var(--accent);
 }
 
-.section-subtitle-stacked {
-    margin: 0 0 2.25em;
-    text-align: center;
-    display: block;
+.page-title-with-subtitle {
+    margin-bottom: 0.25em;
 }
 
 .section-subtitle {
@@ -239,6 +237,12 @@ main {
     font-variant: normal;
     letter-spacing: normal;
     opacity: 1;
+}
+
+.section-subtitle-stacked {
+    margin: 0 0 2.25em;
+    text-align: center;
+    display: block;
 }
 
 /* =========================================================
