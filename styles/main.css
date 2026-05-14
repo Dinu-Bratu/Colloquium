@@ -11,6 +11,10 @@
     box-sizing: border-box;
 }
 
+.work-in-progress {
+    display: none;
+}
+
 html {
     min-height: 100%;
 }
@@ -44,6 +48,29 @@ body {
 header {
     text-align: center;
     margin-bottom: 42px;
+}
+
+.masthead-divider {
+    position: relative;
+    height: 12px;
+    margin: 0 0 3em;
+}
+
+.masthead-divider::before,
+.masthead-divider::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid var(--rule);
+}
+
+.masthead-divider::before {
+    top: 2px;
+}
+
+.masthead-divider::after {
+    top: 4px;
 }
 
 .rule {
@@ -169,10 +196,114 @@ footer {
 }
 
 /* =========================================================
+   Article Pages
+========================================================= */
+
+.article-title {
+    margin: 0 0 0.6em;
+    text-align: center;
+    font-size: clamp(1.35rem, 3.7vw, 1.95rem);
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--text);
+}
+
+.article-date {
+    margin: 0 0 0.4em;
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--muted);
+}
+
+.article-author {
+    margin: 0 0 0.4em;
+    text-align: center;
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--text);
+}
+
+.article-author::before {
+    content: "By ";
+}
+
+.article-subtitle {
+    margin: 2.25em 0 0.75em;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.article-meta {
+    margin-top: 3.5em;
+}
+
+.article-version {
+    text-align: center;
+    color: var(--muted);
+}
+
+.article-version::before {
+    content: "Version ";
+}
+
+.article-provenance {
+    text-align: center;
+}
+
+.article-provenance p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.article-tags {
+    margin-top: 1.75em;
+}
+
+.article-tags-title {
+    margin-bottom: 0.5em;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.article-tag-list {
+    margin: 0;
+}
+
+.article-tag {
+    display: inline-block;
+    margin-right: 0.75em;
+    margin-bottom: 0.4em;
+    font-size: 0.9rem;
+    color: var(--accent);
+}
+
+/* For Long-Form Articles */
+
+.article-section-title {
+    margin: 3.5em 0 0.35em;
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: var(--text);
+}
+
+.article-section-subtitle {
+    margin: 0 0 2em;
+    text-align: center;
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--muted);
+}
+
+/* =========================================================
    Interior Pages
 ========================================================= */
 
-.interior-page {
+.interior-page,
+.article-page {
     align-items: flex-start;
 }
 
@@ -185,7 +316,6 @@ footer {
     text-rendering: optimizeLegibility;
     letter-spacing: -0.02em;
     line-height: 1;
-    padding-top: 24px;
 }
 
 .interior-content {
