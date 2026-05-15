@@ -272,11 +272,12 @@ main {
 }
 
 .section-divider {
+    margin-top: 1.3em;
     margin-bottom: 2.6em;
     text-align: center;
     color: var(--muted);
     letter-spacing: 0.85em;
-    font-size: 0.73rem;
+    font-size: 0.78rem;
     opacity: 0.85;
 }
 
