@@ -1,11 +1,52 @@
 :root {
+    /* Other Colors */
     --background: #f7f3ea;
     --text: #252321;
     --muted: #6f6a61;
     --rule: #c9c0b2;
+
+    /* Original Accent Color*/
     --accent: #4b463f;
+
+    /* Oxidized Bronze / Aged Brass */
+    --accent: #7A6A58;
+    --accent: #6E6253;
+    --accent: #8A7A66;
+
+    /* Desaturated Burgundy / Oxblood */
+    --accent: #6A4A4A;
+    --accent: #735252;
+    --accent: #5E4444;
+
+    /* Slate Blue-Gray */
+    --accent: #5F6875;
+    --accent: #67707D;
+    --accent: #58616D;
+
+    /* Olive Ink / Dusty Green */
+    --accent: #66705C;
+    --accent: #707865;
+    --accent: #5E6654;
+
+    /* WINNERS */
+    /* Looks good with clickable heads: Olive/Green */
+    --accent: #66705C;
+
+    /* Accent Override for Testing */
+    --accent: #7A6A58;
+    --hover: #6A4A4A;
+
     --max-width: 820px;
+
+    --font-level-2: 0.97rem;
+    --font-level-3: 1rem;
+    --font-level-4: 1.1rem;
 }
+
+/* =========================================================
+   Random Testing Area
+========================================================= */
+
 
 /* =========================================================
    Foundational Building Blocks
@@ -72,7 +113,7 @@ p:last-child {
 .chamber-entry-title {
     margin-bottom: 0.25em;
     margin-top: 1.4rem;
-    font-size: 1.1rem;
+    font-size: var(--font-level-3);
 }
 
 .chamber-entry-title a,
@@ -80,12 +121,21 @@ p:last-child {
     color: var(--accent);
     text-decoration: none;
     border-bottom: 1px solid var(--rule);
-    font-weight: 550;
+    font-size: var(--font-level-3);
+    font-weight: 400;
 }
+
+.chamber-entry-title a:hover {
+    color: var(--hover);
+    border-bottom-color: var(--hover);
+}
+
 
 .chamber-entry-description {
     margin: 0 0 0.25em;
     font-weight: 400;
+    font-size: var(--font-level-3);
+    max-width: 34rem;
 }
 
 /* =========================================================
@@ -136,16 +186,6 @@ header {
     font-weight: 400;
     letter-spacing: -0.02em;
     line-height: 1;
-}
-
-.interior-masthead a,
-.interior-masthead a:visited {
-    color: var(--text);
-    text-decoration: none;
-}
-
-.interior-masthead a:hover {
-    color: var(--accent);
 }
 
 .masthead-divider {
@@ -275,7 +315,7 @@ main {
     margin-top: 1.3em;
     margin-bottom: 2.6em;
     text-align: center;
-    color: var(--muted);
+    color: var(--accent);
     letter-spacing: 0.85em;
     font-size: 0.78rem;
     opacity: 0.85;
@@ -491,7 +531,7 @@ footer {
     font-size: 1.6rem;
     font-weight: 500;
     font-variant: small-caps;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.10em;
     color: var(--accent);
 }
 
@@ -527,30 +567,41 @@ footer {
     margin: 0;
     text-align: left;
     font-size: 1.15rem;
+    font-size: var(--font-level-2);
+    font-size: 1.1rem;
     font-weight: 500;
 }
 
 .home-entry-title a,
 .home-entry-title a:visited {
-    color: var(--text);
+    color: var(--accent);
     text-decoration: none;
     border-bottom: 1px solid var(--rule);
+    font-size: var(--font-level-4);
+    font-weight: 400;
 }
 
 .home-entry-title a:hover {
-    color: var(--accent);
-    border-bottom-color: var(--accent);
+    color: var(--hover);
+    border-bottom-color: var(--hover);
 }
 
 .home-entry-subtitle {
     margin-top: 0;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.6em;
     text-align: left;
     color: var(--muted);
     font-size: 0.85em;
     font-variant: small-caps;
     letter-spacing: 0.08em;
-    opacity: 0.78;
+    opacity: 0.78; 
+}
+
+.home-entry-description {
+    margin: 0 0 0.25em;
+    font-weight: 400;
+    font-size: var(--font-level-2);
+    max-width: 34rem;
 }
 
 .home-entry p:last-child {
