@@ -185,6 +185,10 @@ header {
     color: var(--masthead);
 }
 
+/* =========================================================
+   Home Page Masthead and Interior Page Mastheads
+========================================================= */
+
 .masthead-divider {
     position: relative;
     height: 1px; 
@@ -208,6 +212,22 @@ header {
     top: 4px;
 }
 
+.interior-masthead a,
+.interior-masthead a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+.interior-masthead a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+.interior-masthead a:focus-visible {
+    outline: 1px solid var(--rule);
+    outline-offset: 0.2em;
+}
+
 .motto {
     margin: 20px auto 0;
     max-width: 620px;
@@ -227,14 +247,6 @@ header {
 
 .rule.bottom {
     margin: 30px auto 22px;
-}
-
-.welcome {
-    margin: 0 0 10px;
-    color: var(--muted);
-    font-size: 0.82rem;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
 }
 
 /* =========================================================
@@ -662,7 +674,6 @@ footer {
         width: 76px;
     }
 
-    .welcome,
     .date {
         font-size: 0.76rem;
     }
@@ -670,6 +681,4 @@ footer {
     footer {
         margin-top: 40px;
     }
-
 }
-
