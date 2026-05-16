@@ -7,7 +7,7 @@
 
     --text: #030303;
 
-    --muted: #6f6a61;
+    --muted: #6F6A61;
 
     --article-title: #4C4340;
     --article-subtitle: #7A6A58;
@@ -15,14 +15,10 @@
     --article-quote: #6F6A61; 
 
     --meta-area: #7A746D;
-    --footer-copyright: #7A746D;
+    --footer-copyright: #6F6A61;
 
     --rule: #c9c0b2;
  
-    /* All-important accent colors
-       for links and hover states.
-       ARE THESE EVEN USED ANYMORE?
-       */
     --accent: #A36E6E;
     --accent-bronze: #7A6A58;
 
@@ -38,11 +34,6 @@
     --intro-fluid: 2.2vw;
     --intro-max: 0.94rem;
 }
-
-/* =========================================================
-   Random Testing Area
-========================================================= */
-
 
 /* =========================================================
    Foundational Building Blocks
@@ -74,7 +65,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 56px 24px;
+    padding: 20px 24px;
 }
 
 .page-container {
@@ -283,7 +274,7 @@ header {
 
 .interior-page {
     align-items: flex-start;
-    padding: 56px 24px;
+    padding: 20px 24px;
 }
 
 .intro {
@@ -334,7 +325,7 @@ main {
 
 .section-divider {
     margin-top: 1.3em;
-    margin-bottom: 2.6em;
+    margin-bottom: 0.6em;
     text-align: center;
     letter-spacing: 0.85em;
     font-size: 0.78rem;
@@ -384,7 +375,7 @@ main {
 }
 
 .article-meta {
-    margin-top: 0.5em;
+    margin-top: 0.1em;
     border-top: none;
 }
 
@@ -398,12 +389,12 @@ main {
     color: var(--meta-area);
 }
 
-.article-provenance {
+.article-info {
     text-align: left;
     color: var(--meta-area);
 }
 
-.article-provenance p {
+.article-info p {
     margin: 0;
     line-height: 1.4;
     color: var(--meta-area);
@@ -499,6 +490,8 @@ footer {
 .footer-copyright {
     border-top: 1em;
     color: var(--footer-copyright);
+    opacity: 0.7;
+    font-size: 0.9em;
 }
 
 .footer-current {
@@ -511,8 +504,22 @@ footer {
     display: inline;
 }
 
-.footer-nav {
+.footer-nav,
+.download-link a {
     text-align: center;
+}
+
+.footer-nav a,
+.download-link a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--hover);
+}
+
+.footer-nav a:hover
+.download-link a:hover {
+    color: var(--hover);
+    border-bottom-color: var(--hover);
 }
 
 .footer-current {
@@ -525,16 +532,6 @@ footer {
     color: var(--muted);
 }
 
-.footer-nav a {
-    color: var(--accent);
-    text-decoration: none;
-    border-bottom: 1px solid var(--hover);
-}
-
-.footer-nav a:hover {
-    color: var(--hover);
-    border-bottom-color: var(--hover);
-}
 
 /* =========================================================
    HOME PAGE STYLES => MOVE SOMEWHERE ELSE WHEN DONE
