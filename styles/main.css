@@ -94,6 +94,10 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+li {
+    color: var(--article-text);
+}
+
 p {
     margin: 0 0 1.25em;
     color: var(--article-text)
@@ -300,6 +304,7 @@ main {
     text-align: center;
     font-size: 1.5rem;
     font-weight: 400;
+    letter-spacing: 0.02em;
     color: var(--accent-bronze);
 }
 
@@ -370,7 +375,7 @@ main {
 }
 
 .article-subtitle {
-    margin: 0.9em 0 0.5em;
+    margin: 1.3em 0 0.5em;
     font-size: 1.3rem;
     font-weight: 500;
     font-variant: small-caps;
