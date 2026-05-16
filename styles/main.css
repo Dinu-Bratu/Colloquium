@@ -25,9 +25,9 @@
        for links and hover states.
        ARE THESE EVEN USED ANYMORE?
        */
-    --accent: #BA7575;
     --accent: #A36E6E;
     --accent-bronze: #7A6A58;
+
     --hover: #BE8686;
 
     --max-width: 820px;
@@ -250,12 +250,12 @@ header {
 .contact-email a:visited {
     color: var(--accent);
     text-decoration: none;
-    border-bottom: 1px solid var(--rule);
+    border-bottom: 1px solid var(--accent);
 }
 
 .contact-email a:hover {
-    color: var(--text);
-    border-bottom-color: var(--text);
+    color: var(--hover);
+    border-bottom-color: var(--hover);
 }
 
 .interior-content {
