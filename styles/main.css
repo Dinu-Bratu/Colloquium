@@ -9,9 +9,7 @@
 
     --muted: #6f6a61;
 
-    
     --article-title: #4C4340;
-
     --article-subtitle: #7A6A58;
     --article-text: #2E2927;
     --article-quote: #6F6A61; 
@@ -35,6 +33,10 @@
     --font-level-2: 0.97rem;
     --font-level-3: 1rem;
     --font-level-4: 1.1rem;
+
+    --intro-min: 0.7rem;
+    --intro-fluid: 2.2vw;
+    --intro-max: 0.94rem;
 }
 
 /* =========================================================
@@ -62,6 +64,24 @@ html {
     min-height: 100%;
 }
 
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 56px 24px;
+}
+
+.page-container {
+    min-height: 100vh;
+    padding: 56px 24px;
+}
+
 body {
     min-height: 100vh;
     margin: 0;
@@ -81,24 +101,6 @@ p {
 
 p:last-child {
     margin-bottom: 0;
-}
-
-.container {
-    width: 100%;
-    max-width: var(--max-width);
-}
-
-.page {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 56px 24px;
-}
-
-.page-container {
-    min-height: 100vh;
-    padding: 56px 24px;
 }
 
 /* =========================================================
@@ -281,7 +283,11 @@ header {
 }
 
 .intro {
-    font-size: clamp(1.08rem, 2.2vw, 1.2rem);
+    font-size: clamp(
+        var(--intro-min),
+        var(--intro-fluid),
+        var(--intro-max)
+    );
 }
 
 main {
@@ -303,9 +309,9 @@ main {
 
 .section-subtitle {
     color: var(--muted);
-    font-size: 0.85em;
+    font-size: 1em;
     font-variant: small-caps;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.09em;
     opacity: 0.78;
 }
 
@@ -348,7 +354,7 @@ main {
     margin: 0 0 0.4em;
     text-align: center;
     font-size: 0.95rem;
-    color: var(--muted);
+    color: var(--accent-bronze);
 }
 
 .article-author {
@@ -356,7 +362,7 @@ main {
     text-align: center;
     font-size: 1rem;
     font-style: italic;
-    color: var(--text);
+    color: var(--article-title);
 }
 
 .article-author::before {
@@ -364,11 +370,11 @@ main {
 }
 
 .article-subtitle {
-    margin: 1.25em 0 0.75em;
-    font-size: 1.125rem;
+    margin: 0.9em 0 0.5em;
+    font-size: 1.3rem;
     font-weight: 500;
     font-variant: small-caps;
-    letter-spacing: 0.022em;
+    letter-spacing: 0.04em;
     color: var(--article-subtitle);
 }
 
@@ -576,7 +582,7 @@ footer {
 }
 
 .home-entry {
-    margin: 0 0 1.7em 0;
+    margin: 0 0 1.3em 0;
 }
 
 .home-entry-title {
@@ -603,13 +609,13 @@ footer {
 }
 
 .home-entry-subtitle {
-    margin-top: 0;
-    margin-bottom: 0.6em;
+    margin-top: -0.1.5em;
+    margin-bottom: 0.15em;
     text-align: left;
-    color: var(--muted);
-    font-size: 0.85em;
+    font-size: 0.9em;
     font-variant: small-caps;
     letter-spacing: 0.08em;
+    color: var(--muted);
     opacity: 0.78; 
 }
 
