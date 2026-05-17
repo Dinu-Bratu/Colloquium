@@ -1,5 +1,9 @@
+/* =========================================================
+   Variables
+========================================================= */
+
 :root {
-    /* Other Colors */
+    /* COLORS */
     --background: #f7f3ea;
 
     --masthead: #2E2927;
@@ -24,11 +28,16 @@
 
     --hover: #BE8686;
 
+    /* SIZING */
     --max-width: 820px;
 
-    --font-level-2: 0.97rem;
-    --font-level-3: 1rem;
-    --font-level-4: 1.1rem;
+    /* FONT SIZES */
+    --font-small-xx: 0.85rem;    
+    --font-small-x: 0.9rem;    
+    --font-small: 0.97rem;
+    --font-medium: 1rem;
+    --font-large: 1.1rem;
+    --font-large-x: 1.6rem;
 
     --intro-min: 0.7rem;
     --intro-fluid: 2.2vw;
@@ -99,13 +108,13 @@ p:last-child {
 }
 
 /* =========================================================
-   CHAMBER SECTION => MOVE TO A FINAL LOCATION AFTER TESTING
+   Chamber Section
 ========================================================= */
 
 .chamber-entry-title {
     margin-bottom: 0.25em;
     margin-top: 1.4rem;
-    font-size: var(--font-level-3);
+    font-size: var(--font-medium);
 }
 
 .chamber-entry-title a,
@@ -113,7 +122,7 @@ p:last-child {
     color: var(--accent);
     text-decoration: none;
     border-bottom: 1px solid var(--rule);
-    font-size: var(--font-level-3);
+    font-size: var(--font-medium);
     font-weight: 400;
 }
 
@@ -126,7 +135,7 @@ p:last-child {
 .chamber-entry-description {
     margin: 0 0 0.25em;
     font-weight: 400;
-    font-size: var(--font-level-3);
+    font-size: var(--font-medium);
     max-width: 34rem;
 }
 
@@ -150,26 +159,26 @@ p:last-child {
 .date {
     margin: 0;
     color: var(--muted);
-    font-size: 0.9rem;
+    font-size: var(--font-small-xx);
     letter-spacing: 0.12em;
     text-transform: uppercase;
 }
 
 h1 {
     margin: 0;
+    line-height: 0.95;
     color: var(--text);
     color: var(--masthead);
-    font-size: clamp(3.35rem, 10vw, 6.25rem);
     font-weight: 400;
     font-kerning: normal;
     text-rendering: optimizeLegibility;
     letter-spacing: -0.025em;
-    line-height: 0.95;
+    font-size: clamp(3.35rem, 10vw, 6.25rem);
 }
 
 header {
     text-align: center;
-    margin-bottom: 42px;
+    padding-bottom: 2em;
 }
 
 .interior-masthead {
@@ -279,11 +288,12 @@ header {
 
 .intro {
     font-size: clamp(
-        var(--intro-min),
+        var(--font-small-x),
         var(--intro-fluid),
-        var(--intro-max)
+        var(--font-small)
     );
 }
+
 
 main {
     max-width: 700px;
@@ -492,6 +502,7 @@ footer {
     color: var(--footer-copyright);
     opacity: 0.7;
     font-size: 0.9em;
+    font-size: var(--font-small-xx);
 }
 
 .footer-current {
@@ -504,20 +515,18 @@ footer {
     display: inline;
 }
 
-.footer-nav,
-.download-link a {
+.footer-nav a {
     text-align: center;
 }
 
-.footer-nav a,
-.download-link a {
+.footer-nav a {
     color: var(--accent);
     text-decoration: none;
     border-bottom: 1px solid var(--hover);
+    font-size: var(--font-small-x);
 }
 
-.footer-nav a:hover
-.download-link a:hover {
+.footer-nav a:hover {
     color: var(--hover);
     border-bottom-color: var(--hover);
 }
@@ -525,6 +534,7 @@ footer {
 .footer-current {
     color: var(--muted);
     cursor: default;
+    font-size: var(--font-small-x);
 }
 
 .footer-separator {
@@ -532,17 +542,30 @@ footer {
     color: var(--muted);
 }
 
+/* =========================================================
+   Download Links
+========================================================= */
+
+.download-link a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    font-size: var(--font-small-xx);
+}
+
+.download-link a:hover {
+    color: var(--hover);
+    border-bottom-color: var(--hover);
+}
 
 /* =========================================================
-   HOME PAGE STYLES => MOVE SOMEWHERE ELSE WHEN DONE
+   Home Page Styles
 ========================================================= */
 
 .home-footer-nav {
     margin-top: 1.0rem;
     margin-bottom: 1.0rem;
 }
-
-/* NEW */
 
 .home-index-heading {
     margin: 2em auto 2em;
@@ -551,12 +574,12 @@ footer {
 
 .home-index-heading h2 {
     margin: 0.25em auto 0.25em auto;
-    font-size: 1.6rem;
-    font-weight: 500;
-    font-variant: small-caps;
-    letter-spacing: 0.10em;
     color: var(--accent);
     color: var(--accent-bronze);
+    font-variant: small-caps;
+    letter-spacing: 0.10em;
+    font-weight: 500;
+    font-size: var(--font-large-x);
 }
 
 .home-index-heading-rule {
@@ -590,10 +613,9 @@ footer {
 .home-entry-title {
     margin: 0;
     text-align: left;
-    font-size: 1.15rem;
-    font-size: var(--font-level-2);
-    font-size: 1.1rem;
     font-weight: 500;
+    font-size: 1.1rem;
+    font-size: var(--font-large);
 }
 
 .home-entry-title a,
@@ -601,7 +623,6 @@ footer {
     color: var(--accent);
     text-decoration: none;
     border-bottom: 1px solid var(--accent);
-    font-size: var(--font-level-4);
     font-weight: 400;
 }
 
@@ -623,16 +644,18 @@ footer {
 
 .home-entry-description {
     margin: 0 0 0.25em;
-    font-weight: 400;
-    font-size: var(--font-level-2);
     max-width: 34rem;
+    font-weight: 400;
+    font-size: var(--font-small);
 }
 
 .home-entry p:last-child {
     margin-bottom: 0;
 }
 
-/* Dormant Styles */
+/* =========================================================
+   Dormant Styles
+========================================================= */
 
 .home-entry-dormant {
     opacity: 0.6;
@@ -663,7 +686,7 @@ footer {
     }
 
     header {
-        margin-bottom: 34px;
+        margin-bottom: 20px;
     }
 
     .rule {
@@ -680,10 +703,6 @@ footer {
 
     .brand-seal img {
         width: 76px;
-    }
-
-    .date {
-        font-size: 0.76rem;
     }
 
     footer {
