@@ -32,14 +32,14 @@
     --max-width: 820px;
 
     /* FONT SIZES */
-    --font-small-xx: 0.85rem;    
+    --font-small-xx: 0.89rem;    
     --font-small-x: 0.9rem;    
     --font-small: 0.97rem;
     --font-medium: 1rem;
     --font-large: 1.1rem;
     --font-large-x: 1.6rem;
 
-    --intro-min: 1rem;
+    --intro-min: 0.92rem;
     --intro-fluid: 2.2vw;
     --intro-max: 1.05rem;
 }
@@ -74,7 +74,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px 24px;
+    padding: 32px 24px 26px 24px;
 }
 
 .page-container {
@@ -83,15 +83,15 @@ html {
 }
 
 body {
+    color: var(--text);
+    background: var(--background);
     min-height: 100vh;
     margin: 0;
-    background: var(--background);
-    color: var(--text);
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 18px;
-    line-height: 1.65;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    line-height: 1.65;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
 }
 
 li {
@@ -106,41 +106,6 @@ p {
 p:last-child {
     margin-bottom: 0;
 }
-
-/* =========================================================
-   Chamber Section
-========================================================= */
-
-/*
-
-.chamber-entry-title {
-    margin-bottom: 0.25em;
-    margin-top: 1.4rem;
-    font-size: var(--font-medium);
-}
-
-.chamber-entry-title a,
-.chamber-entry-title a:visited {
-    color: var(--accent);
-    text-decoration: none;
-    border-bottom: 1px solid var(--rule);
-    font-size: var(--font-medium);
-    font-weight: 400;
-}
-
-.chamber-entry-title a:hover {
-    color: var(--hover);
-    border-bottom-color: var(--hover);
-}
-
-.chamber-entry-description {
-    margin: 0 0 0.25em;
-    font-weight: 400;
-    font-size: var(--font-medium);
-    max-width: 34rem;
-}
-
-*/
 
 /* =========================================================
    Masthead
@@ -162,9 +127,9 @@ p:last-child {
 .date {
     margin: 0;
     color: var(--muted);
-    font-size: var(--font-small-xx);
     letter-spacing: 0.12em;
     text-transform: uppercase;
+    font-size: var(--font-small-x);
 }
 
 h1 {
@@ -286,17 +251,16 @@ header {
 
 .interior-page {
     align-items: flex-start;
-    padding: 20px 24px;
+    padding: 32px;
 }
 
 .intro {
     font-size: clamp(
-        var(----intro-min),
+        var(--intro-min),
         var(--intro-fluid),
         var(--intro-max)
     );
 }
-
 
 main {
     max-width: 700px;
@@ -337,8 +301,8 @@ main {
 }
 
 .section-divider {
-    margin-top: 1.3em;
-    margin-bottom: 0.6em;
+    margin-top: 1.3rem;
+    margin-bottom: 1.5rem;
     text-align: center;
     letter-spacing: 0.85em;
     font-size: 0.78rem;
@@ -380,37 +344,38 @@ main {
 
 .article-subtitle {
     margin: 1.3em 0 0.5em;
-    font-size: 1.3rem;
+    color: var(--article-subtitle);
     font-weight: 500;
     font-variant: small-caps;
     letter-spacing: 0.04em;
-    color: var(--article-subtitle);
+    font-size: 1.3rem;
 }
 
 .article-meta {
     margin-top: 0.1em;
     border-top: none;
+    font-size: var(--font-small-xx)
 }
 
 .article-version {
-    text-align: left;
     color: var(--meta-area);
+    text-align: left;
 }
 
 .article-version::before {
-    content: "Version ";
     color: var(--meta-area);
+    content: "Version ";
 }
 
 .article-info {
-    text-align: left;
     color: var(--meta-area);
+    text-align: left;
 }
 
 .article-info p {
+    color: var(--meta-area);
     margin: 0;
     line-height: 1.4;
-    color: var(--meta-area);
 }
 
 /* Article Tags */
@@ -490,22 +455,12 @@ p.article-tags-title {
    Footer
 ========================================================= */
 
-footer {
-    margin-top: 48px;
-    padding-top: 24px;
-    border-top: 1px solid var(--rule);
-    color: var(--muted);
-    text-align: center;
-    font-size: 0.88rem;
-    letter-spacing: 0.04em;
-}
-
 .footer-copyright {
-    border-top: 1em;
     color: var(--footer-copyright);
+    border-top: 1em;
+    text-align: center;
     opacity: 0.7;
-    font-size: 0.9em;
-    font-size: 0.92rem;
+    font-size: var(--font-small-xx);
 }
 
 .footer-current {
@@ -518,26 +473,34 @@ footer {
     display: inline;
 }
 
-.footer-nav a {
+.footer-nav {
+    color: var(--accent);
+    margin-top: 44px;
+    padding-top: 24px;
+    text-decoration: none;
+    border-top: 1px solid var(--rule);
     text-align: center;
+    letter-spacing: 0.04em;
+    font-size: var(--font-small-xx);
 }
 
-.footer-nav a {
+.footer-nav a,
+.footer-nav a:visited {
     color: var(--accent);
-    text-decoration: none;
-    border-bottom: 1px solid var(--hover);
-    font-size: 0.92rem;
+    text-decoration: inherit;
+    border-bottom: 1px solid var(--accent);
 }
 
 .footer-nav a:hover {
     color: var(--hover);
+    text-decoration: inherit;
     border-bottom-color: var(--hover);
 }
 
 .footer-current {
     color: var(--muted);
     cursor: default;
-    font-size: 0.92rem
+    font-size: var(--font-small-x);
 }
 
 .footer-separator {
@@ -553,7 +516,6 @@ footer {
     color: var(--accent);
     text-decoration: none;
     border-bottom: 1px solid var(--accent);
-    font-size: var(--font-small-xx);
 }
 
 .download-link a:hover {
@@ -613,7 +575,7 @@ footer {
     margin: 0 0 1.3em 0;
 }
 
-/* Styles shared with chamber-* */
+/* Shared .home-entry-* and .chamber-entry-* styles */
 
 .home-entry-title,
 .home-entry-title a,
@@ -708,9 +670,5 @@ footer {
 
     .brand-seal img {
         width: 76px;
-    }
-
-    footer {
-        margin-top: 40px;
     }
 }
