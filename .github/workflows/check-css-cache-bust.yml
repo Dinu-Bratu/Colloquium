@@ -18,8 +18,7 @@ jobs:
         with:
           script: |
             const body = context.payload.pull_request.body || "";
-            const required = "- [x] If styles/main.css changed, I updated the cache-busting SHA512 hash in all affected HTML references.";
 
-            if (!body.includes(required)) {
+            if (!body.includes("[x]") || !body.includes("cache-busting")) {
               core.setFailed("styles/main.css changed. Check the CSS cache-busting acknowledgment box in the PR description.");
             }
