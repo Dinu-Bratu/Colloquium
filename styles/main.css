@@ -264,12 +264,12 @@ main {
 }
 
 .page-title {
+    color: var(--accent-bronze);
     margin: 0 0 1.5em;
     text-align: center;
-    font-size: 1.5rem;
     font-weight: 400;
     letter-spacing: 0.02em;
-    color: var(--accent-bronze);
+    font-size: 24px;
 }
 
 .page-title-with-subtitle {
@@ -278,10 +278,10 @@ main {
 
 .section-subtitle {
     color: var(--muted);
-    font-size: 1em;
+    opacity: 0.78;
     font-variant: small-caps;
     letter-spacing: 0.09em;
-    opacity: 0.78;
+    font-size: 18px;
 }
 
 .section-subtitle::before {
@@ -297,13 +297,13 @@ main {
 }
 
 .section-divider {
+    color: var(--accent-bronze);
     margin-top: 1.3rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem;
     text-align: center;
     letter-spacing: 0.85em;
-    font-size: 0.78rem;
     opacity: 0.65;
-    color: var(--accent-bronze);
+    font-size: 0.78rem;
 }
 
 /* =========================================================
@@ -320,18 +320,18 @@ main {
 }
 
 .article-date {
+    color: var(--accent-bronze);
     margin: 0 0 0.4em;
     text-align: center;
-    font-size: 0.95rem;
-    color: var(--accent-bronze);
+    font-size: 16.5px;
 }
 
 .article-author {
+    color: var(--article-title);
     margin: 0 0 0.4em;
     text-align: center;
-    font-size: 1rem;
     font-style: italic;
-    color: var(--article-title);
+    font-size: 17px;
 }
 
 .article-author::before {
@@ -339,19 +339,19 @@ main {
 }
 
 .article-subtitle {
-    margin: 1.3em 0 0.5em;
     color: var(--article-subtitle);
+    margin: 1.3em 0 0.5em;
     font-weight: 500;
     font-variant: small-caps;
     letter-spacing: 0.04em;
-    font-size: 1.3rem;
+    font-size: 22px;
 }
 
 .article-meta {
     margin-top: 0.1em;
     border-top: none;
     letter-spacing: 0.04em;
-    font-size: var(--font-small-x)
+    font-size: 16px;
 }
 
 .article-version {
@@ -412,20 +412,20 @@ p.article-tags-title {
 /* Styles for Long-Form Articles */
 
 .article-section-title {
+    color: var(--text);
     margin: 3.5em 0 0.35em;
     text-align: center;
-    font-size: 1.15rem;
     font-weight: 400;
     letter-spacing: 0.02em;
-    color: var(--text);
+    font-size: 1.15rem;
 }
 
 .article-section-subtitle {
     margin: 0 0 2em;
     text-align: center;
-    font-size: 1rem;
     font-style: italic;
     color: var(--muted);
+    font-size: 1rem;
 }
 
 .article-quote {
@@ -433,9 +433,9 @@ p.article-tags-title {
     margin: 0 auto 1.275em;
     padding-left: 2rem;
     padding-right: 2rem;
-    font-size: 17.25px;
     line-height: 1.7;
     font-style: italic;
+    font-size: 16.75px;
 }
 
 .article-quote p {
@@ -444,21 +444,13 @@ p.article-tags-title {
 
 .article-quote-source {
     display: block;
-    margin-top: 0.75em;
     font-style: italic;
+    margin-top: 0.75em;
 }
 
 /* =========================================================
    Footer
 ========================================================= */
-
-.footer-copyright {
-    color: var(--footer-copyright);
-    border-top: 1em;
-    text-align: center;
-    opacity: 0.7;
-    font-size: 16.5px;
-}
 
 .footer-current {
     color: var(--muted);
@@ -468,6 +460,7 @@ p.article-tags-title {
     margin: 0;
     padding: 0;
     display: inline;
+    font-size: 16px;
 }
 
 .footer-nav {
@@ -478,7 +471,7 @@ p.article-tags-title {
     border-top: 1px solid var(--rule);
     text-align: center;
     letter-spacing: 0.04em;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .footer-nav a,
@@ -494,10 +487,12 @@ p.article-tags-title {
     border-bottom-color: var(--hover);
 }
 
-.footer-current {
-    color: var(--muted);
-    cursor: default;
-    font-size: var(--font-small-x);
+.footer-copyright {
+    color: var(--footer-copyright);
+    border-top: 1em;
+    text-align: center;
+    opacity: 0.7;
+    font-size: 16px;
 }
 
 .footer-separator {
@@ -569,8 +564,18 @@ p.article-tags-title {
 }
 
 .home-entry {
-    margin: 0 0 1.3em 0;
+    margin: 1.3rem 0 1.3em 0;
 }
+
+.home-entry p:first-child {
+    margin-top: 0;
+}
+
+
+.home-entry p:last-child {
+    margin-bottom: 0;
+}
+
 
 /* Shared .home-entry-* and .chamber-entry-* styles */
 
@@ -580,11 +585,17 @@ p.article-tags-title {
 .chamber-entry-title,
 .chamber-entry-title a,
 .chamber-entry-title a:visited {
-    margin: 0;
     color: var(--accent);
+    margin: 0;
     text-align: left;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 19px;
+}
+
+.home-entry-title a,
+.chamber-entry-title a {
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
 }
 
 .home-entry-title a:hover,
@@ -594,7 +605,6 @@ p.article-tags-title {
 }
 
 .home-entry-subtitle {
-    margin-top: -0.15em;
     margin-bottom: 0.15em;
     color: var(--muted);
     opacity: 0.78; 
@@ -612,10 +622,6 @@ p.article-tags-title {
     max-width: 34rem;
     font-weight: 400;
     font-size: 18px;
-}
-
-.home-entry p:last-child {
-    margin-bottom: 0;
 }
 
 /* =========================================================
