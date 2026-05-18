@@ -19,6 +19,6 @@ jobs:
           script: |
             const body = context.payload.pull_request.body || "";
 
-            if (!body.includes("[x]") || !body.includes("cache-busting")) {
-              core.setFailed("styles/main.css changed. Check the CSS cache-busting acknowledgment box in the PR description.");
+            if (!body.includes("CSS-CACHE-BUSTING-ACK: YES")) {
+              core.setFailed("styles/main.css changed. Add 'CSS-CACHE-BUSTING-ACK: YES' to the PR description.");
             }
