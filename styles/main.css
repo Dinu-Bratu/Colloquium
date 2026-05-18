@@ -111,6 +111,8 @@ p:last-child {
    Chamber Section
 ========================================================= */
 
+/*
+
 .chamber-entry-title {
     margin-bottom: 0.25em;
     margin-top: 1.4rem;
@@ -131,13 +133,14 @@ p:last-child {
     border-bottom-color: var(--hover);
 }
 
-
 .chamber-entry-description {
     margin: 0 0 0.25em;
     font-weight: 400;
     font-size: var(--font-medium);
     max-width: 34rem;
 }
+
+*/
 
 /* =========================================================
    Masthead
@@ -288,9 +291,9 @@ header {
 
 .intro {
     font-size: clamp(
-        var(--font-small-x),
+        var(----intro-min),
         var(--intro-fluid),
-        var(--font-small)
+        var(--intro-max)
     );
 }
 
@@ -502,7 +505,7 @@ footer {
     color: var(--footer-copyright);
     opacity: 0.7;
     font-size: 0.9em;
-    font-size: var(--font-small-xx);
+    font-size: 0.92rem;
 }
 
 .footer-current {
@@ -523,7 +526,7 @@ footer {
     color: var(--accent);
     text-decoration: none;
     border-bottom: 1px solid var(--hover);
-    font-size: var(--font-small-x);
+    font-size: 0.92rem;
 }
 
 .footer-nav a:hover {
@@ -534,7 +537,7 @@ footer {
 .footer-current {
     color: var(--muted);
     cursor: default;
-    font-size: var(--font-small-x);
+    font-size: 0.92rem
 }
 
 .footer-separator {
@@ -610,19 +613,23 @@ footer {
     margin: 0 0 1.3em 0;
 }
 
+/* Styles shared with chamber-* */
+
 .home-entry-title,
 .home-entry-title a,
-.home-entry-title a:visited {
+.home-entry-title a:visited,
+.chamber-entry-title,
+.chamber-entry-title a,
+.chamber-entry-title a:visited {
     margin: 0;
     color: var(--accent);
-    /* border-bottom: 1px solid var(--accent); */
     text-align: left;
-    /* text-decoration: none; */
     font-weight: 500;
     font-size: 1rem;
 }
 
-.home-entry-title a:hover {
+.home-entry-title a:hover,
+.chamber-entry-title a:hover {
     color: var(--hover);
     border-bottom-color: var(--hover);
 }
@@ -639,7 +646,8 @@ footer {
     font-size: 0.92rem;
 }
 
-.home-entry-description {
+.home-entry-description,
+.chamber-entry-description {
     margin: 0 0 0.25em;
     max-width: 34rem;
     font-weight: 400;
