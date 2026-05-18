@@ -1,0 +1,24 @@
+name: Check CSS cache-busting acknowledgment
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'styles/main.css'
+      - '**/*.html'
+
+jobs:
+  require-css-cache-ack:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check PR body for CSS cache acknowledgment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = context.payload.pull_request.body || "";
+
+            if (!body.includes("[x]") || !body.includes("cache-busting")) {
+              core.setFailed("styles/main.css changed. Check the CSS cache-busting acknowledgment box in the PR description.");
+            }
