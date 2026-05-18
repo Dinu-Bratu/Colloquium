@@ -264,12 +264,12 @@ main {
 }
 
 .page-title {
+    color: var(--accent-bronze);
     margin: 0 0 1.5em;
     text-align: center;
-    font-size: 1.5rem;
     font-weight: 400;
     letter-spacing: 0.02em;
-    color: var(--accent-bronze);
+    font-size: 24px;
 }
 
 .page-title-with-subtitle {
@@ -278,10 +278,10 @@ main {
 
 .section-subtitle {
     color: var(--muted);
-    font-size: 1em;
+    opacity: 0.78;
     font-variant: small-caps;
     letter-spacing: 0.09em;
-    opacity: 0.78;
+    font-size: 18px;
 }
 
 .section-subtitle::before {
@@ -320,18 +320,18 @@ main {
 }
 
 .article-date {
+    color: var(--accent-bronze);
     margin: 0 0 0.4em;
     text-align: center;
-    font-size: 0.95rem;
-    color: var(--accent-bronze);
+    font-size: 16.5px;
 }
 
 .article-author {
+    color: var(--article-title);
     margin: 0 0 0.4em;
     text-align: center;
-    font-size: 1rem;
     font-style: italic;
-    color: var(--article-title);
+    font-size: 17px;
 }
 
 .article-author::before {
@@ -339,19 +339,19 @@ main {
 }
 
 .article-subtitle {
-    margin: 1.3em 0 0.5em;
     color: var(--article-subtitle);
+    margin: 1.3em 0 0.5em;
     font-weight: 500;
     font-variant: small-caps;
     letter-spacing: 0.04em;
-    font-size: 1.3rem;
+    font-size: 22px;
 }
 
 .article-meta {
     margin-top: 0.1em;
     border-top: none;
     letter-spacing: 0.04em;
-    font-size: var(--font-small-x)
+    font-size: 16px;
 }
 
 .article-version {
@@ -452,14 +452,6 @@ p.article-tags-title {
    Footer
 ========================================================= */
 
-.footer-copyright {
-    color: var(--footer-copyright);
-    border-top: 1em;
-    text-align: center;
-    opacity: 0.7;
-    font-size: 16.5px;
-}
-
 .footer-current {
     color: var(--muted);
     opacity: 0.75;
@@ -468,6 +460,7 @@ p.article-tags-title {
     margin: 0;
     padding: 0;
     display: inline;
+    font-size: 16px;
 }
 
 .footer-nav {
@@ -478,7 +471,7 @@ p.article-tags-title {
     border-top: 1px solid var(--rule);
     text-align: center;
     letter-spacing: 0.04em;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .footer-nav a,
@@ -494,10 +487,12 @@ p.article-tags-title {
     border-bottom-color: var(--hover);
 }
 
-.footer-current {
-    color: var(--muted);
-    cursor: default;
-    font-size: var(--font-small-x);
+.footer-copyright {
+    color: var(--footer-copyright);
+    border-top: 1em;
+    text-align: center;
+    opacity: 0.7;
+    font-size: 16px;
 }
 
 .footer-separator {
