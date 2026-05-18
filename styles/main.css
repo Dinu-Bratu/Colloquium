@@ -38,7 +38,7 @@
     --font-large: 1.1rem;
     --font-large-x: 1.6rem;
 
-    /* Possibly Unused or Unneeded: Verify */
+    /* May be Unused or Unneeded: Verify before deleting */
     --intro-min: 0.92rem;
     --intro-fluid: 2.2vw;
     --intro-max: 1.05rem;
