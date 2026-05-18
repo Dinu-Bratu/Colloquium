@@ -32,7 +32,6 @@
     --max-width: 820px;
 
     /* FONT SIZES */
-    --font-small-xx: 0.89rem;    
     --font-small-x: 0.9rem;    
     --font-small: 0.97rem;
     --font-medium: 1rem;
@@ -255,11 +254,7 @@ header {
 }
 
 .intro {
-    font-size: clamp(
-        var(--intro-min),
-        var(--intro-fluid),
-        var(--intro-max)
-    );
+    font-size: 16px;
 }
 
 main {
@@ -354,7 +349,8 @@ main {
 .article-meta {
     margin-top: 0.1em;
     border-top: none;
-    font-size: var(--font-small-xx)
+    letter-spacing: 0.04em;
+    font-size: var(--font-small-x)
 }
 
 .article-version {
@@ -436,7 +432,7 @@ p.article-tags-title {
     margin: 0 auto 1.275em;
     padding-left: 2rem;
     padding-right: 2rem;
-    font-size: 1.0rem;
+    font-size: 17.25px;
     line-height: 1.7;
     font-style: italic;
 }
@@ -460,7 +456,7 @@ p.article-tags-title {
     border-top: 1em;
     text-align: center;
     opacity: 0.7;
-    font-size: var(--font-small-xx);
+    font-size: var(--font-small-x);
 }
 
 .footer-current {
@@ -481,7 +477,7 @@ p.article-tags-title {
     border-top: 1px solid var(--rule);
     text-align: center;
     letter-spacing: 0.04em;
-    font-size: var(--font-small-xx);
+    font-size: var(--font-small-x);
 }
 
 .footer-nav a,
@@ -587,7 +583,7 @@ p.article-tags-title {
     color: var(--accent);
     text-align: left;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 17px;
 }
 
 .home-entry-title a:hover,
@@ -605,7 +601,8 @@ p.article-tags-title {
     font-variant: small-caps;
     font-variant: small-caps;
     letter-spacing: 0.08em;
-    font-size: 0.92rem;
+    line-height: 1.45;
+    font-size: 16.2px;
 }
 
 .home-entry-description,
@@ -613,7 +610,7 @@ p.article-tags-title {
     margin: 0 0 0.25em;
     max-width: 34rem;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 17px;
 }
 
 .home-entry p:last-child {
