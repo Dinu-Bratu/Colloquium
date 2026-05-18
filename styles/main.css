@@ -39,9 +39,9 @@
     --font-large: 1.1rem;
     --font-large-x: 1.6rem;
 
-    --intro-min: 0.7rem;
+    --intro-min: 1rem;
     --intro-fluid: 2.2vw;
-    --intro-max: 0.94rem;
+    --intro-max: 1.05rem;
 }
 
 /* =========================================================
@@ -610,20 +610,16 @@ footer {
     margin: 0 0 1.3em 0;
 }
 
-.home-entry-title {
-    margin: 0;
-    text-align: left;
-    font-weight: 500;
-    font-size: 1.1rem;
-    font-size: var(--font-large);
-}
-
+.home-entry-title,
 .home-entry-title a,
 .home-entry-title a:visited {
+    margin: 0;
     color: var(--accent);
-    text-decoration: none;
-    border-bottom: 1px solid var(--accent);
-    font-weight: 400;
+    /* border-bottom: 1px solid var(--accent); */
+    text-align: left;
+    /* text-decoration: none; */
+    font-weight: 500;
+    font-size: 1rem;
 }
 
 .home-entry-title a:hover {
@@ -632,21 +628,22 @@ footer {
 }
 
 .home-entry-subtitle {
-    margin-top: -0.1.5em;
+    margin-top: -0.15em;
     margin-bottom: 0.15em;
-    text-align: left;
-    font-size: 0.9em;
-    font-variant: small-caps;
-    letter-spacing: 0.08em;
     color: var(--muted);
     opacity: 0.78; 
+    text-align: left;
+    font-variant: small-caps;
+    font-variant: small-caps;
+    letter-spacing: 0.08em;
+    font-size: 0.92rem;
 }
 
 .home-entry-description {
     margin: 0 0 0.25em;
     max-width: 34rem;
     font-weight: 400;
-    font-size: var(--font-small);
+    font-size: 1rem;
 }
 
 .home-entry p:last-child {
