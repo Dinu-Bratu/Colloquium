@@ -63,6 +63,11 @@
     white-space: nowrap;
 }
 
+.pointer {
+    cursor: auto;
+    user-select: none;
+}
+
 html {
     min-height: 100%;
 }
