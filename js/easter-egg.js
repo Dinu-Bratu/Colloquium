@@ -1,39 +1,20 @@
 (() => {
-    const logo = document.querySelector("#brand-seal-logo");
+    const logo = document.querySelector("#masthead-logo");
     const motto = document.querySelector("p.motto");
 
-    if (!seal || !logo || !motto) return;
+    if (!logo || !motto) return;
 
     const normalLogoSrc = logo.getAttribute("src");
-    const easterEggLogoSrc = "/images/ee-logo.png?v=REPLACE_ME";
+    const easterEggLogoSrc = "/images/logo-easter-egg.png?v=3E05BC66";
 
     const normalMotto = motto.innerHTML;
     const easterEggMotto = "In Aperto Latet";
 
+    let mouseIsInsideLogo = false;
     let eggActive = false;
-    let lastPointerX = null;
-    let lastPointerY = null;
-
-    function clearPointerPosition() {
-        lastPointerX = null;
-        lastPointerY = null;
-    }
-
-    function pointerIsInsideSeal() {
-        if (lastPointerX === null || lastPointerY === null) return false;
-
-        const rect = seal.getBoundingClientRect();
-
-        return (
-            lastPointerX >= rect.left &&
-            lastPointerX <= rect.right &&
-            lastPointerY >= rect.top &&
-            lastPointerY <= rect.bottom
-        );
-    }
 
     function activateEasterEgg() {
-        if (!pointerIsInsideSeal() || eggActive) return;
+        if (!mouseIsInsideLogo || eggActive) return;
 
         logo.setAttribute("src", easterEggLogoSrc);
         motto.innerHTML = easterEggMotto;
@@ -46,27 +27,19 @@
         eggActive = false;
     }
 
-    document.addEventListener("pointermove", (event) => {
-        lastPointerX = event.clientX;
-        lastPointerY = event.clientY;
-
-        if (eggActive && !pointerIsInsideSeal()) {
-            resetEasterEgg();
-        }
+    logo.addEventListener("mouseenter", () => {
+        mouseIsInsideLogo = true;
     });
 
-    seal.addEventListener("mouseleave", () => {
-        clearPointerPosition();
+    logo.addEventListener("mouseleave", () => {
+        mouseIsInsideLogo = false;
         resetEasterEgg();
     });
 
-    seal.addEventListener("contextmenu", () => {
-        clearPointerPosition();
-        resetEasterEgg();
-    });
+    logo.addEventListener("contextmenu", resetEasterEgg);
 
     document.addEventListener("keydown", (event) => {
-        if (event.key === "Alt") {
+        if (event.key === "Alt" && mouseIsInsideLogo) {
             activateEasterEgg();
         }
     });
@@ -78,14 +51,7 @@
     });
 
     window.addEventListener("blur", () => {
-        clearPointerPosition();
+        mouseIsInsideLogo = false;
         resetEasterEgg();
-    });
-
-    document.addEventListener("visibilitychange", () => {
-        if (document.hidden) {
-            clearPointerPosition();
-            resetEasterEgg();
-        }
     });
 })();
