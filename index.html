@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Colloquium</title>
     <meta name="description" content="The Colloquium is an evolving publication space for essays, civic discourse, philosophy, poetry and sonnets, AI-generated art, history, and long-form inquiry.">
-    <link rel="stylesheet" href="styles/main.css?v=73221E8B">
+    <link rel="stylesheet" href="styles/main.css?v=15996B99">
     <script src="/js/easter-egg.js?v=12344" defer></script>
     <!--
     <link rel="icon" href="/favicon.ico" sizes="any">
@@ -20,12 +20,24 @@
                 <div class="masthead-divider"></div>
 
                 <div class="brand-seal" aria-hidden="true">
-                    <img id="masthead-logo" src="/images/logo-default.png?v=7EBCB6F3" alt="">
+                    <span id="masthead-logo-trigger" class="masthead-logo-trigger">
+                        <img
+                            id="masthead-logo-default"
+                            class="masthead-logo"
+                            src="/images/logo-default.png?v=7EBCB6F3"
+                            alt="">
+
+                        <img
+                            id="masthead-logo-easter-egg"
+                            class="masthead-logo"
+                            src="/images/logo-easter-egg.png?v=3E05BC66"
+                            alt="">
+                    </span>
                 </div>
 
                 <h1 id="site-title">The Colloquium</h1>
 
-                <p class="motto" title="Respublica litterarum, meditationis, et inquisitionis.">A republic of letters, reflection, and inquiry.</p>
+                <p id="masthead-motto" class="motto" title="Respublica litterarum, meditationis, et inquisitionis.">A republic of letters, reflection, and inquiry.</p>
 
                 <hr class="rule bottom">
 
