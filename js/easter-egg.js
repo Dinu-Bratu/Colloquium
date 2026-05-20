@@ -8,8 +8,9 @@
     const normalMotto = motto.innerHTML;
     const easterEggMotto = "In Aperto Latet";
 
-    const lingerDelayMs = 1350;
-    const fadeInOutMs = 1200;
+    const lingerDelayMs = 1200;
+    const lingerFadeMs = 1200;
+    const resetFadeMs = 1200;
 
     let mouseIsInsideLogo = false;
     let eggActive = false;
@@ -33,14 +34,16 @@
     function setMottoText(text, durationMs) {
         clearMottoTimer();
 
-        motto.style.transitionDuration = `${durationMs}ms`;
+        const halfDurationMs = durationMs / 2;
+
+        motto.style.transitionDuration = `${halfDurationMs}ms`;
         motto.classList.add("motto-fading");
 
         mottoTimer = setTimeout(() => {
             motto.innerHTML = text;
             motto.classList.remove("motto-fading");
             mottoTimer = null;
-        }, durationMs);
+        }, halfDurationMs);
     }
 
     function activateEasterEgg() {
@@ -48,10 +51,10 @@
 
         clearLingerTimer();
 
-        easterEggLogo.style.transitionDuration = `${fadeInOutMs}ms`;
+        easterEggLogo.style.transitionDuration = `${lingerFadeMs}ms`;
         trigger.classList.add("easter-egg-active");
 
-        setMottoText(easterEggMotto, fadeInOutMs);
+        setMottoText(easterEggMotto, lingerFadeMs);
 
         eggActive = true;
     }
@@ -61,10 +64,10 @@
 
         if (!eggActive) return;
 
-        easterEggLogo.style.transitionDuration = `${fadeInOutMs}ms`;
+        easterEggLogo.style.transitionDuration = `${resetFadeMs}ms`;
         trigger.classList.remove("easter-egg-active");
 
-        setMottoText(normalMotto, fadeInOutMs);
+        setMottoText(normalMotto, resetFadeMs);
 
         eggActive = false;
     }
