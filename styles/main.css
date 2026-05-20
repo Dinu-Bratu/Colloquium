@@ -42,6 +42,9 @@
     --intro-min: 0.92rem;
     --intro-fluid: 2.2vw;
     --intro-max: 1.05rem;
+
+    /* Add Extra Space Above or Below a Container */
+    --extra-space: 20px;
 }
 
 /* =========================================================
@@ -106,6 +109,54 @@ p {
 p:last-child {
     margin-bottom: 0;
 }
+
+/* =========================================================
+   Extra Spacing
+========================================================= */
+
+.space-above {
+    padding-top: var(--extra-space);
+}
+
+.space-below {
+    padding-bottom: var(--extra-space);
+}
+
+/* =========================================================
+   Footnotes
+========================================================= */
+
+.footnote-ref {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+.footnotes-list {
+    padding-left: 1.5em;
+}
+
+.footnote-item {
+    margin-bottom: 1.25em;
+    line-height: 1.6;
+}
+
+.footnote-backlink,
+.footnote-backlink:visited {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    margin-left: 0.4em;
+}
+
+.footnote-backlink:hover {
+    color: var(--hover);
+    border-bottom-color: var(--hover);
+}
+
 
 /* =========================================================
    Masthead
@@ -310,13 +361,22 @@ main {
    Article Pages
 ========================================================= */
 
+.article-tagline {
+    color: var(--article-title);
+    letter-spacing: 0.025rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+    font-size: 18px;
+}
+
 .article-title {
-    margin: 0 0 0.6em;
+    color: var(--article-title);
+    margin-bottom: 0.3rem;
     text-align: center;
-    font-size: clamp(1.35rem, 3.7vw, 1.55rem);
     font-weight: 400;
     line-height: 1.15;
-    color: var(--article-title);
+    letter-spacing: 0.04rem;
+    font-size: 27px;
 }
 
 .article-date {
@@ -327,8 +387,8 @@ main {
 }
 
 .article-author {
-    color: var(--article-title);
-    margin: 0 0 0.4em;
+    color: var(--accent-bronze);
+    margin: 1.5rem 0 0.3em;
     text-align: center;
     font-style: italic;
     font-size: 17px;
@@ -340,7 +400,7 @@ main {
 
 .article-subtitle {
     color: var(--article-subtitle);
-    margin: 1.3em 0 0.5em;
+    margin-bottom: 0;
     font-weight: 500;
     font-variant: small-caps;
     letter-spacing: 0.04em;
@@ -433,7 +493,7 @@ p.article-tags-title {
     margin: 0 auto 1.275em;
     padding-left: 2rem;
     padding-right: 2rem;
-    line-height: 1.7;
+    line-height: 1.6;
     font-style: italic;
     font-size: 16.75px;
 }
@@ -586,7 +646,8 @@ p.article-tags-title {
 .chamber-entry-title a,
 .chamber-entry-title a:visited {
     color: var(--accent);
-    margin: 0;
+    margin-bottom: 0.35em;
+    margin-top: 1em;
     text-align: left;
     font-weight: 500;
     font-size: 19px;
@@ -604,7 +665,8 @@ p.article-tags-title {
     border-bottom-color: var(--hover);
 }
 
-.home-entry-subtitle {
+.home-entry-subtitle,
+.chamber-entry-subtitle {
     margin-bottom: 0.15em;
     color: var(--muted);
     opacity: 0.78; 
