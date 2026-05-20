@@ -764,12 +764,16 @@ p.article-tags-title {
     opacity: 0;
 }
 
-#masthead-logo-trigger.easter-egg-active ~ .motto .motto-default {
+body.easter-egg-active .motto .motto-default {
     opacity: 0;
 }
 
-#masthead-logo-trigger.easter-egg-active ~ .motto .motto-easter-egg {
+body.easter-egg-active .motto .motto-easter-egg {
     opacity: 1;
+}
+
+#masthead-logo-trigger.easter-egg-active ~ .motto .motto-default {
+    opacity: 0;
 }
 
 /* =========================================================
