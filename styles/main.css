@@ -174,7 +174,7 @@ p:last-child {
 
 .brand-seal img {
     display: block;
-    width: clamp(76px, 13vw, 112px);
+    width: clamp(140px, 13vw, 150px);
     height: auto;
     margin: 0 auto;
     opacity: 0.88;
@@ -739,11 +739,40 @@ p.article-tags-title {
     opacity: 1;
 }
 
+/*
 .motto {
     transition: opacity 600ms ease-in-out;
 }
 
 .motto.motto-fading {
+    opacity: 0;
+}
+*/
+
+.motto {
+    position: relative;
+}
+
+.motto-default,
+.motto-easter-egg {
+    transition: opacity 1200ms ease-in-out;
+}
+
+.motto-easter-egg {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+}
+
+body.easter-egg-active .motto .motto-default {
+    opacity: 0;
+}
+
+body.easter-egg-active .motto .motto-easter-egg {
+    opacity: 1;
+}
+
+#masthead-logo-trigger.easter-egg-active ~ .motto .motto-default {
     opacity: 0;
 }
 
@@ -772,13 +801,5 @@ p.article-tags-title {
 
     .rule.bottom {
         margin-top: 26px;
-    }
-
-    .brand-seal {
-        margin-bottom: 16px;
-    }
-
-    .brand-seal img {
-        width: 76px;
     }
 }
