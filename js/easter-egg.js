@@ -1,53 +1,91 @@
 (() => {
-    const logo = document.querySelector("#masthead-logo");
-    const motto = document.querySelector("p.motto");
+    const trigger = document.querySelector("#masthead-logo-trigger");
+    const easterEggLogo = document.querySelector("#masthead-logo-easter-egg");
+    const motto = document.querySelector("#masthead-motto");
 
-    if (!logo || !motto) return;
-
-    const normalLogoSrc = logo.getAttribute("src");
-    const easterEggLogoSrc = "/images/logo-easter-egg.png?v=3E05BC66";
+    if (!trigger || !easterEggLogo || !motto) return;
 
     const normalMotto = motto.innerHTML;
     const easterEggMotto = "In Aperto Latet";
 
+    const lingerDelayMs = 1350;
+    const fadeInOutMs = 1200;
+
     let mouseIsInsideLogo = false;
     let eggActive = false;
+    let lingerTimer = null;
+    let mottoTimer = null;
+
+    function clearLingerTimer() {
+        if (lingerTimer !== null) {
+            clearTimeout(lingerTimer);
+            lingerTimer = null;
+        }
+    }
+
+    function clearMottoTimer() {
+        if (mottoTimer !== null) {
+            clearTimeout(mottoTimer);
+            mottoTimer = null;
+        }
+    }
+
+    function setMottoText(text, durationMs) {
+        clearMottoTimer();
+
+        motto.style.transitionDuration = `${durationMs}ms`;
+        motto.classList.add("motto-fading");
+
+        mottoTimer = setTimeout(() => {
+            motto.innerHTML = text;
+            motto.classList.remove("motto-fading");
+            mottoTimer = null;
+        }, durationMs);
+    }
 
     function activateEasterEgg() {
         if (!mouseIsInsideLogo || eggActive) return;
 
-        logo.setAttribute("src", easterEggLogoSrc);
-        motto.innerHTML = easterEggMotto;
+        clearLingerTimer();
+
+        easterEggLogo.style.transitionDuration = `${fadeInOutMs}ms`;
+        trigger.classList.add("easter-egg-active");
+
+        setMottoText(easterEggMotto, fadeInOutMs);
+
         eggActive = true;
     }
 
     function resetEasterEgg() {
-        logo.setAttribute("src", normalLogoSrc);
-        motto.innerHTML = normalMotto;
+        clearLingerTimer();
+
+        if (!eggActive) return;
+
+        easterEggLogo.style.transitionDuration = `${fadeInOutMs}ms`;
+        trigger.classList.remove("easter-egg-active");
+
+        setMottoText(normalMotto, fadeInOutMs);
+
         eggActive = false;
     }
 
-    logo.addEventListener("mouseenter", () => {
+    trigger.addEventListener("mouseenter", () => {
         mouseIsInsideLogo = true;
+
+        clearLingerTimer();
+
+        lingerTimer = setTimeout(() => {
+            activateEasterEgg();
+        }, lingerDelayMs);
     });
 
-    logo.addEventListener("mouseleave", () => {
+    trigger.addEventListener("mouseleave", () => {
         mouseIsInsideLogo = false;
         resetEasterEgg();
     });
 
-    logo.addEventListener("contextmenu", resetEasterEgg);
-
-    document.addEventListener("keydown", (event) => {
-        if (event.key === "Alt" && mouseIsInsideLogo) {
-            activateEasterEgg();
-        }
-    });
-
-    document.addEventListener("keyup", (event) => {
-        if (event.key === "Alt") {
-            resetEasterEgg();
-        }
+    trigger.addEventListener("contextmenu", () => {
+        resetEasterEgg();
     });
 
     window.addEventListener("blur", () => {
