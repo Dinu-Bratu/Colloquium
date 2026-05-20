@@ -15,7 +15,7 @@
     let mouseIsInsideLogo = false;
     let eggActive = false;
     let lingerTimer = null;
-    let mottoTimer = null;
+    let sequence = 0;
 
     function clearLingerTimer() {
         if (lingerTimer !== null) {
@@ -24,41 +24,17 @@
         }
     }
 
-    function clearMottoTimer() {
-        if (mottoTimer !== null) {
-            clearTimeout(mottoTimer);
-            mottoTimer = null;
-        }
-    }
+function activateEasterEgg() {
+    if (!mouseIsInsideLogo || eggActive) return;
 
-    function setMottoText(text, durationMs) {
-        clearMottoTimer();
+    clearLingerTimer();
 
-        const halfDurationMs = durationMs / 2;
+    easterEggLogo.style.transitionDuration = `${lingerFadeMs}ms`;
+    trigger.classList.add("easter-egg-active");
+    document.body.classList.add("easter-egg-active");
 
-        motto.style.transitionDuration = `${halfDurationMs}ms`;
-        motto.classList.add("motto-fading");
-
-        mottoTimer = setTimeout(() => {
-            motto.innerHTML = text;
-            motto.classList.remove("motto-fading");
-            mottoTimer = null;
-        }, halfDurationMs);
-    }
-
-    function activateEasterEgg() {
-        if (!mouseIsInsideLogo || eggActive) return;
-
-        clearLingerTimer();
-
-        easterEggLogo.style.transitionDuration = `${lingerFadeMs}ms`;
-        trigger.classList.add("easter-egg-active");
-
-        setMottoText(easterEggMotto, lingerFadeMs);
-
-        eggActive = true;
-    }
-
+    eggActive = true;
+}
     function resetEasterEgg() {
         clearLingerTimer();
 
@@ -66,8 +42,7 @@
 
         easterEggLogo.style.transitionDuration = `${resetFadeMs}ms`;
         trigger.classList.remove("easter-egg-active");
-
-        setMottoText(normalMotto, resetFadeMs);
+        document.body.classList.remove("easter-egg-active");
 
         eggActive = false;
     }
@@ -78,7 +53,11 @@
         clearLingerTimer();
 
         lingerTimer = setTimeout(() => {
-            activateEasterEgg();
+            lingerTimer = null;
+
+            if (mouseIsInsideLogo) {
+                activateEasterEgg();
+            }
         }, lingerDelayMs);
     });
 
