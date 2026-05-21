@@ -59,7 +59,7 @@
     display: none;
 }
 
-.no-break {
+.nbsp {
     white-space: nowrap;
 }
 
@@ -369,7 +369,10 @@ main {
 .article-tagline {
     color: var(--article-title);
     letter-spacing: 0.025rem;
-    margin-bottom: 1rem;
+    line-height: 1.6rem;;
+    margin-bottom: 0.65rem;
+    margin-right: 1rem;
+    margin-top: 0.2rem;
     font-style: italic;
     font-size: 18px;
 }
@@ -405,10 +408,12 @@ main {
 
 .article-subtitle {
     color: var(--article-subtitle);
-    margin-bottom: 0;
+    margin-bottom: 0.4rem;
+    margin-right: 2.5rem;
     font-weight: 500;
     font-variant: small-caps;
     letter-spacing: 0.04em;
+    line-height: 1.2em;
     font-size: 22px;
 }
 
@@ -652,7 +657,7 @@ p.article-tags-title {
 .chamber-entry-title a:visited {
     color: var(--accent);
     margin-bottom: 0.35em;
-    margin-top: 1em;
+    margin-top: 1.6em;
     text-align: left;
     font-weight: 500;
     font-size: 19px;
@@ -681,6 +686,11 @@ p.article-tags-title {
     letter-spacing: 0.08em;
     line-height: 1.45;
     font-size: 17px;
+}
+
+.chamber-entry-subtitle {
+    line-height: 1.25;
+    margin-right: 5em;
 }
 
 .home-entry-description,
