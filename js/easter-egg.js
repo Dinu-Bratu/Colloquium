@@ -5,9 +5,7 @@
 
     if (!trigger || !easterEggLogo || !motto) return;
 
-    const normalMotto = motto.innerHTML;
-    const easterEggMotto = "In Aperto Latet";
-
+    const clsActive = "easter-egg-active";
     const lingerDelayMs = 1200;
     const lingerFadeMs = 1200;
     const resetFadeMs = 1200;
@@ -15,7 +13,6 @@
     let mouseIsInsideLogo = false;
     let eggActive = false;
     let lingerTimer = null;
-    let sequence = 0;
 
     function clearLingerTimer() {
         if (lingerTimer !== null) {
@@ -24,25 +21,26 @@
         }
     }
 
-function activateEasterEgg() {
-    if (!mouseIsInsideLogo || eggActive) return;
+    function activateEasterEgg() {
+        if (!mouseIsInsideLogo || eggActive) return;
 
-    clearLingerTimer();
+        clearLingerTimer();
 
-    easterEggLogo.style.transitionDuration = `${lingerFadeMs}ms`;
-    trigger.classList.add("easter-egg-active");
-    document.body.classList.add("easter-egg-active");
+        easterEggLogo.style.transitionDuration = `${lingerFadeMs}ms`;
+        trigger.classList.add(clsActive);
+        document.body.classList.add(clsActive);
 
-    eggActive = true;
-}
+        eggActive = true;
+    }
+
     function resetEasterEgg() {
         clearLingerTimer();
 
         if (!eggActive) return;
 
         easterEggLogo.style.transitionDuration = `${resetFadeMs}ms`;
-        trigger.classList.remove("easter-egg-active");
-        document.body.classList.remove("easter-egg-active");
+        trigger.classList.remove(clsActive);
+        document.body.classList.remove(clsActive);
 
         eggActive = false;
     }
