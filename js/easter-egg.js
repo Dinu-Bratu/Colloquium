@@ -1,9 +1,8 @@
 (() => {
-    const trigger = document.querySelector("#masthead-logo-trigger");
-    const easterEggLogo = document.querySelector("#masthead-logo-easter-egg");
-    const motto = document.querySelector("#masthead-motto");
+    const trigger = document.querySelector(".ee-logo-default");
+    const easterEggLogo = document.querySelector(".ee-logo-easter-egg");
 
-    if (!trigger || !easterEggLogo || !motto) return;
+    if (!trigger || !easterEggLogo) return;
 
     const clsActive = "easter-egg-active";
     const lingerDelayMs = 1200;
