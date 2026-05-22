@@ -445,6 +445,31 @@ main {
     line-height: 1.4;
 }
 
+/* Article Divider */
+
+.article-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.article-divider-line {
+    width: 80px;
+    height: 0.5px;
+    background-color: var(--muted);
+    opacity: 0.65;
+}
+
+.article-divider-diamond {
+    width: 6px;
+    height: 6px;
+    margin: 0 14px;
+    background-color: var(--muted);
+    transform: rotate(45deg);
+    opacity: 0.85;
+}
+
 /* Article Tags */
 
 .article-tags,
@@ -814,7 +839,7 @@ body.easter-egg-active .motto .motto-easter-egg {
     }
 
     header {
-        margin-bottom: 20px;
+        margin-bottom: 12px;
     }
 
     .rule {
