@@ -369,10 +369,10 @@ main {
 .article-tagline {
     color: var(--article-title);
     letter-spacing: 0.025rem;
-    line-height: 1.6rem;;
+    line-height: 1.6rem;
+    padding-top: 0.2rem;
     margin-bottom: 0.65rem;
     margin-right: 1rem;
-    margin-top: 0.2rem;
     font-style: italic;
     font-size: 18px;
 }
@@ -383,7 +383,7 @@ main {
     text-align: center;
     font-weight: 400;
     line-height: 1.15;
-    letter-spacing: 0.04rem;
+    letter-spacing: 0.045rem;
     font-size: 27px;
 }
 
@@ -456,7 +456,7 @@ main {
 
 .article-divider-line {
     width: 80px;
-    height: 0.5px;
+    height: 0.8px;
     background-color: var(--muted);
     opacity: 0.65;
 }
@@ -684,6 +684,7 @@ p.article-tags-title {
     margin-bottom: 0.35em;
     margin-top: 1.6em;
     text-align: left;
+    letter-spacing: 0.032rem;
     font-weight: 500;
     font-size: 19px;
 }
