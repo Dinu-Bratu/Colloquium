@@ -424,7 +424,8 @@ main {
     font-size: 16px;
 }
 
-.article-version {
+.article-version
+.poem-author {
     color: var(--meta-area);
     text-align: left;
 }
@@ -432,6 +433,11 @@ main {
 .article-version::before {
     color: var(--meta-area);
     content: "Version ";
+}
+
+.poem-author::before {
+    color: var(--meta-area);
+    content: "Author: ";
 }
 
 .article-info {
