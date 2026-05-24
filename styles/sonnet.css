@@ -42,7 +42,6 @@
 .sonnet-couplet {
     position: relative;
     display: flow-root;
-    overflow: auto;
 }
 
 /* Add stanza spacing only between stanza containers */
@@ -74,7 +73,6 @@
 ---------------------------------------- */
 
 .sonnet-couplet {
-    margin-top: 1.65rem;
     margin-bottom: 2rem;
 }
 
@@ -139,7 +137,7 @@
 
 @media (max-width: 640px) {
 
-    .sonnet {
+.sonnet {
         padding-left: 0.85rem;
         padding-right: 0.85rem;
     }
@@ -160,5 +158,9 @@
     .sonnet-couplet + .sonnet-stanza {
         margin-top: 0.7rem;
     }
+
+    .sonnet-stanza-opening {
+        min-height: auto;
+    }   
 }
 
