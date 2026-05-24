@@ -1,0 +1,166 @@
+/* ----------------------------------------
+   Sonnet Structure
+---------------------------------------- */
+
+.sonnet {
+    max-width: 42rem;
+    margin: 0 auto;
+    padding-left: 1.15rem;
+}
+
+.sonnet-header {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.sonnet-title {
+    color: var(--article-title);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 27px;
+    font-weight: 400;
+    letter-spacing: 0.045rem;
+    line-height: 1.15;
+    text-align: center;
+}
+
+/* ----------------------------------------
+   Sonnet Body
+---------------------------------------- */
+
+.sonnet-body {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.1rem;
+    line-height: 1.45;
+}
+
+/* Keep paragraph tags clean and predictable */
+.sonnet-body p {
+    margin: 0;
+}
+
+.sonnet-stanza,
+.sonnet-couplet {
+    position: relative;
+    display: flow-root;
+}
+
+/* Add stanza spacing only between stanza containers */
+.sonnet-stanza + .sonnet-stanza,
+.sonnet-stanza + .sonnet-couplet,
+.sonnet-couplet + .sonnet-stanza {
+    margin-top: 1.4rem;
+}
+
+/* ----------------------------------------
+   Opening Stanza Drop Cap
+---------------------------------------- */
+
+.sonnet-stanza-opening {
+    min-height: 5.5rem;
+}
+
+/* Let the text flow around the drop cap */
+.sonnet-dropcap {
+    float: left;
+    height: 4em;
+    width: auto;
+    margin: 0.12em 0.45em 0 0;
+    object-fit: contain;
+}
+
+/* ----------------------------------------
+   Couplet
+---------------------------------------- */
+
+.sonnet-couplet {
+    margin-bottom: 2rem;
+}
+
+.sonnet-couplet p {
+    margin-left: 2rem;
+}
+
+/* ----------------------------------------
+   Filigree
+---------------------------------------- */
+
+.sonnet-footer {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.sonnet-filigree {
+    display: inline-block;
+    width: 7rem;
+    max-width: 40%;
+    height: auto;
+    opacity: 0.75;
+}
+
+/* ----------------------------------------
+   Sonnet Companion Region
+---------------------------------------- */
+
+.sonnet-companion {
+    width: 100%;
+    max-width: 42rem;
+    margin: 2.5rem auto 0;
+}
+
+.sonnet-meta {
+    margin: 0 0 1.25rem;
+}
+
+.sonnet-companion-image {
+    margin: 0;
+    text-align: center;
+}
+
+.sonnet-companion-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* ----------------------------------------
+   Sonnet Divider Line
+---------------------------------------- */
+
+.sonnet-divider {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+/* ----------------------------------------
+   Mobile Sonnet Adjustments
+---------------------------------------- */
+
+@media (max-width: 640px) {
+
+.sonnet {
+        padding-left: 0.85rem;
+        padding-right: 0.85rem;
+    }
+
+    .sonnet-body {
+        font-size: 0.8rem;
+        line-height: 1.42;
+    }
+
+    .sonnet-dropcap {
+        height: 2.4em;
+        margin-right: 0.35em;
+    }
+
+    /* Add stanza spacing only between stanza containers */
+    .sonnet-stanza + .sonnet-stanza,
+    .sonnet-stanza + .sonnet-couplet,
+    .sonnet-couplet + .sonnet-stanza {
+        margin-top: 0.7rem;
+    }
+
+    .sonnet-stanza-opening {
+        min-height: auto;
+    }   
+}
+
