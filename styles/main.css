@@ -738,16 +738,19 @@ p.article-tags-title {
    Dormant Styles
 ========================================================= */
 
-.home-entry-dormant {
+.home-entry-dormant,
+.chamber-entry-dormant {
     opacity: 0.6;
 }
 
-.home-entry-dormant .home-entry-title {
+.home-entry-dormant .home-entry-title,
+.chamber-entry-dormant .chamber-entry-title {
     color: var(--text);
     font-weight: 500;
 }
 
-.home-entry-dormant .home-entry-subtitle {
+.home-entry-dormant .home-entry-subtitle,
+.home-entry-dormant .chamber-entry-subtitle {
     opacity: 0.9;
 }
 
