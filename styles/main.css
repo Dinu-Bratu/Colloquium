@@ -376,6 +376,7 @@ main {
 
 .article-title {
     color: var(--article-title);
+    padding-top: 0.85em;
     margin-bottom: 0.3rem;
     text-align: center;
     font-weight: 400;
