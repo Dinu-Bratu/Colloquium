@@ -35,7 +35,8 @@
 
 /* Keep paragraph tags clean and predictable */
 .sonnet-body p {
-    margin: 0;
+    padding-left: 0;
+    text-indent: 0;
 }
 
 .sonnet-stanza,
@@ -67,6 +68,11 @@
     margin: 0.12em 0.45em 0 0;
     object-fit: contain;
 }
+
+.sonnet-dropcap .dropcap,
+.sonnet-dropcap::first-letter {
+    margin-right: 0.12em;
+}    
 
 /* ----------------------------------------
    Couplet
@@ -136,21 +142,37 @@
 ---------------------------------------- */
 
 @media (max-width: 640px) {
-
-.sonnet {
-        padding-left: 0.85rem;
-        padding-right: 0.85rem;
+    .page {
+        padding-left: 14px;
+        padding-right: 14px;    
     }
 
+    .sonnet {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
     .sonnet-body {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         line-height: 1.42;
+    }
+
+    .sonnet-body p {
+        padding-left: 1.25em;
+        text-indent: -1.25em;
     }
 
     .sonnet-dropcap {
         height: 2.4em;
         margin-right: 0.35em;
     }
+
+    .sonnet-dropcap .dropcap,
+    .sonnet-dropcap::first-letter {
+        font-size: 2.6em;
+        line-height: 0.85;
+        margin-right: 0.14em;
+    }    
 
     /* Add stanza spacing only between stanza containers */
     .sonnet-stanza + .sonnet-stanza,
