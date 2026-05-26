@@ -16,11 +16,13 @@
 .sonnet-title {
     color: var(--article-title);
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 27px;
+    font-size: 26px;
     font-weight: 400;
     letter-spacing: 0.045rem;
     line-height: 1.15;
     text-align: center;
+    padding-top: 1.2em;
+    padding-bottom: 1.3em;
 }
 
 /* ----------------------------------------
@@ -33,9 +35,20 @@
     line-height: 1.45;
 }
 
-/* Keep paragraph tags clean and predictable */
 .sonnet-body p {
     margin: 0;
+    padding-left: 1.25em;
+    text-indent: -1.25em;
+}
+
+.sonnet-body p.sonnet-opening-line {
+    padding-left: 0;
+    padding-right: 0
+}
+
+.sonnet-body p.sonnet-opening-line {
+    padding-left: 0;
+    text-indent: 0;
 }
 
 .sonnet-stanza,
@@ -44,7 +57,6 @@
     display: flow-root;
 }
 
-/* Add stanza spacing only between stanza containers */
 .sonnet-stanza + .sonnet-stanza,
 .sonnet-stanza + .sonnet-couplet,
 .sonnet-couplet + .sonnet-stanza {
@@ -59,7 +71,6 @@
     min-height: 5.5rem;
 }
 
-/* Let the text flow around the drop cap */
 .sonnet-dropcap {
     float: left;
     height: 4em;
@@ -67,6 +78,11 @@
     margin: 0.12em 0.45em 0 0;
     object-fit: contain;
 }
+
+.sonnet-dropcap .dropcap,
+.sonnet-dropcap::first-letter {
+    margin-right: 0.12em;
+}    
 
 /* ----------------------------------------
    Couplet
@@ -136,21 +152,68 @@
 ---------------------------------------- */
 
 @media (max-width: 640px) {
-
-.sonnet {
-        padding-left: 0.85rem;
-        padding-right: 0.85rem;
+    .page {
+        padding-left: 24px;
+        padding-right: 24px;
     }
 
+    .sonnet {
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+        padding-left: 14px;
+        padding-right: 14px;    
+    }
+
+    .sonnet {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
     .sonnet-body {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         line-height: 1.42;
+    }
+
+    .sonnet-body p {
+        margin: 0;
+        padding-left: 1.25em;
+        text-indent: -1.25em;
+    }
+
+    .sonnet-body p.sonnet-opening-line {
+        padding-left: 0;
+        padding-right: 0
     }
 
     .sonnet-dropcap {
         height: 2.4em;
-        margin-right: 0.35em;
+        margin: 0.08em 0.35em 0 0;
     }
+
+    .sonnet-stanza-opening {
+        min-height: auto;
+        padding-left: 0;
+        text-indent: 0;
+    }
+
+/* ----------------------------------------
+   Couplet
+---------------------------------------- */
+
+    .sonnet-couplet {
+            margin-bottom: 2rem;
+        }
+
+    .sonnet-couplet p {
+            margin-left: 1rem;
+        }
+
+    .sonnet-dropcap .dropcap,
+    .sonnet-dropcap::first-letter {
+        font-size: 2.6em;
+        line-height: 0.85;
+        margin-right: 0.14em;
+    }    
 
     /* Add stanza spacing only between stanza containers */
     .sonnet-stanza + .sonnet-stanza,
@@ -158,9 +221,4 @@
     .sonnet-couplet + .sonnet-stanza {
         margin-top: 0.7rem;
     }
-
-    .sonnet-stanza-opening {
-        min-height: auto;
-    }   
 }
-

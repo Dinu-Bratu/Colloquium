@@ -135,7 +135,6 @@ p:last-child {
     color: var(--accent);
     text-decoration: none;
     border-bottom: 1px solid var(--accent);
-
     text-decoration: none;
     font-size: 0.8em;
 }
@@ -161,7 +160,6 @@ p:last-child {
     color: var(--hover);
     border-bottom-color: var(--hover);
 }
-
 
 /* =========================================================
    Masthead
@@ -202,7 +200,6 @@ h1 {
 
 header {
     text-align: center;
-    padding-bottom: 2em;
 }
 
 .interior-masthead {
@@ -379,6 +376,7 @@ main {
 
 .article-title {
     color: var(--article-title);
+    padding-top: 0.85em;
     margin-bottom: 0.3rem;
     text-align: center;
     font-weight: 400;
@@ -457,7 +455,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1.5rem;
+    margin-top: 2em;
+    margin-bottom: 3em;
 }
 
 .article-divider-line {
@@ -685,7 +684,10 @@ p.article-tags-title {
 .home-entry-title a:visited,
 .chamber-entry-title,
 .chamber-entry-title a,
-.chamber-entry-title a:visited {
+.chamber-entry-title a:visited,
+.link-list-item,
+.link-list-item a,
+.link-list-item a:visited {
     color: var(--accent);
     margin-bottom: 0.35em;
     margin-top: 1.6em;
@@ -695,14 +697,20 @@ p.article-tags-title {
     font-size: 19px;
 }
 
+.link-list-item {
+    margin-top: 0.7em;
+}
+
 .home-entry-title a,
-.chamber-entry-title a {
+.chamber-entry-title a,
+.link-list-item a {
     text-decoration: none;
     border-bottom: 1px solid var(--accent);
 }
 
 .home-entry-title a:hover,
-.chamber-entry-title a:hover {
+.chamber-entry-title a:hover,
+.link-list-item a:hover {
     color: var(--hover);
     border-bottom-color: var(--hover);
 }
@@ -846,6 +854,8 @@ body.easter-egg-active .motto .motto-easter-egg {
     .page {
         align-items: flex-start;
         padding: 42px 20px;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     header {
