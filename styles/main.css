@@ -280,6 +280,14 @@ header {
    Body
 ========================================================= */
 
+.dedication {
+    color: var(--article-text);
+    text-align: center;
+    font-style: italic;
+    line-height: 1.5em;
+    padding-top: 1em;
+}
+
 .contact-email {
     margin-top: 2em;
     text-align: center;
@@ -427,27 +435,26 @@ main {
 .article-provenance {
     color: var(--meta-area);
     text-align: left;
-    font-size: 16px
+    /* font-size: 16px; */
 }
 
 .article-version::before {
     color: var(--meta-area);
     content: "Version ";
-    font-size: inherit;
+    /* font-size: inherit; */
 }
 
 .poem-author::before {
     color: var(--meta-area);
     content: "Author: ";
-    font-size: inherit;
+    /* font-size: inherit; */
 }
 
 .article-provenance::before {
     color: var(--meta-area);
     content: "Provenance Token: ";
-    font-size: inherit;
+    /* font-size: inherit; */
 }
-
 
 .article-info {
     color: var(--meta-area);
@@ -462,12 +469,17 @@ main {
 
 /* Article Divider */
 
-.article-divider {
+.article-divider,
+.article-divider-inset {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 2em;
     margin-bottom: 3em;
+}
+
+.article-divider-inset {
+    margin-bottom: 1em;
 }
 
 .article-divider-line {
