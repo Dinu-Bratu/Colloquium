@@ -39,6 +39,7 @@
     margin: 0;
     padding-left: 1.25em;
     text-indent: -1.25em;
+    line-height: 1.85rem;
 }
 
 .sonnet-body p.sonnet-opening-line {
@@ -151,23 +152,41 @@
    Mobile Sonnet Adjustments
 ---------------------------------------- */
 
+@media (min-width: 641px) and (max-width: 1023px) {
+    .sonnet-title {
+        font-size: 34px;
+    }
+
+    .sonnet-body {
+        font-size: 1.3rem;
+        line-height: 1.5;
+    }
+
+    .sonnet {
+        max-width: 46rem;
+    }    
+}
+
+@media (min-width: 1024px) and (max-width: 1180px) {
+    .sonnet-title {
+        font-size: 38px;
+    }
+
+    .sonnet-body {
+        font-size: 1.45rem;
+        line-height: 1.5;
+    }
+
+    .sonnet {
+        max-width: 48rem;
+    }
+}
+
 @media (max-width: 640px) {
     .page {
         padding-left: 24px;
         padding-right: 24px;
     }
-
-    .sonnet {
-        padding-left: 0.25rem;
-        padding-right: 0.25rem;
-        padding-left: 14px;
-        padding-right: 14px;    
-    }
-
-    .sonnet {
-            padding-left: 0;
-            padding-right: 0;
-        }
 
     .sonnet-body {
         font-size: 0.9rem;
@@ -196,9 +215,9 @@
         text-indent: 0;
     }
 
-/* ----------------------------------------
-   Couplet
----------------------------------------- */
+    /* ----------------------------------------
+    Couplet
+    ---------------------------------------- */
 
     .sonnet-couplet {
             margin-bottom: 2rem;
