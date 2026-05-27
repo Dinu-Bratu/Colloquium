@@ -423,7 +423,8 @@ main {
 }
 
 .article-version
-.poem-author {
+.poem-author,
+.article-provenance {
     color: var(--meta-area);
     text-align: left;
 }
@@ -437,6 +438,12 @@ main {
     color: var(--meta-area);
     content: "Author: ";
 }
+
+.article-version::before {
+    color: var(--meta-area);
+    content: "Provenance Token: ";
+}
+
 
 .article-info {
     color: var(--meta-area);
