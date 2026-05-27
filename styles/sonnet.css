@@ -42,16 +42,6 @@
     line-height: 1.78rem;
 }
 
-.sonnet-body p.sonnet-opening-line {
-    padding-left: 0;
-    padding-right: 0
-}
-
-.sonnet-body p.sonnet-opening-line {
-    padding-left: 0;
-    text-indent: 0;
-}
-
 .sonnet-stanza,
 .sonnet-couplet {
     position: relative;
@@ -63,27 +53,6 @@
 .sonnet-couplet + .sonnet-stanza {
     margin-top: 1.4rem;
 }
-
-/* ----------------------------------------
-   Opening Stanza Drop Cap
----------------------------------------- */
-
-.sonnet-stanza-opening {
-    min-height: 5.5rem;
-}
-
-.sonnet-dropcap {
-    float: left;
-    height: 4em;
-    width: auto;
-    margin: 0.12em 0.45em 0 0;
-    object-fit: contain;
-}
-
-.sonnet-dropcap .dropcap,
-.sonnet-dropcap::first-letter {
-    margin-right: 0.12em;
-}    
 
 /* ----------------------------------------
    Couplet
@@ -153,16 +122,6 @@
         line-height: 1.3rem;
     }
 
-    .sonnet-body p.sonnet-opening-line {
-        padding-left: 0;
-        padding-right: 0
-    }
-
-    .sonnet-dropcap {
-        height: 2.4em;
-        margin: 0.08em 0.35em 0 0;
-    }
-
     .sonnet-stanza-opening {
         min-height: auto;
         padding-left: 0;
@@ -176,13 +135,6 @@
     .sonnet-couplet p {
             margin-left: 1rem;
         }
-
-    .sonnet-dropcap .dropcap,
-    .sonnet-dropcap::first-letter {
-        font-size: 2.6em;
-        line-height: 0.85;
-        margin-right: 0.14em;
-    }    
 
     .sonnet-stanza + .sonnet-stanza,
     .sonnet-stanza + .sonnet-couplet,
