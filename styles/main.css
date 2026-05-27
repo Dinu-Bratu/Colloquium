@@ -423,20 +423,31 @@ main {
 }
 
 .article-version
-.poem-author {
+.poem-author,
+.article-provenance {
     color: var(--meta-area);
     text-align: left;
+    font-size: 16px
 }
 
 .article-version::before {
     color: var(--meta-area);
     content: "Version ";
+    font-size: inherit;
 }
 
 .poem-author::before {
     color: var(--meta-area);
     content: "Author: ";
+    font-size: inherit;
 }
+
+.article-provenance::before {
+    color: var(--meta-area);
+    content: "Provenance Token: ";
+    font-size: inherit;
+}
+
 
 .article-info {
     color: var(--meta-area);
