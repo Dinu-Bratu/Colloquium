@@ -31,15 +31,15 @@
 
 .sonnet-body {
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.1rem;
-    line-height: 1.45;
+    font-size: 1.0rem;
+    font-size: 1.2rem;
 }
 
 .sonnet-body p {
     margin: 0;
     padding-left: 1.25em;
     text-indent: -1.25em;
-    line-height: 1.85rem;
+    line-height: 1.78rem;
 }
 
 .sonnet-body p.sonnet-opening-line {
@@ -98,23 +98,6 @@
 }
 
 /* ----------------------------------------
-   Filigree
----------------------------------------- */
-
-.sonnet-footer {
-    margin-top: 2.5rem;
-    text-align: center;
-}
-
-.sonnet-filigree {
-    display: inline-block;
-    width: 7rem;
-    max-width: 40%;
-    height: auto;
-    opacity: 0.75;
-}
-
-/* ----------------------------------------
    Sonnet Companion Region
 ---------------------------------------- */
 
@@ -152,36 +135,6 @@
    Mobile Sonnet Adjustments
 ---------------------------------------- */
 
-@media (min-width: 641px) and (max-width: 1023px) {
-    .sonnet-title {
-        font-size: 34px;
-    }
-
-    .sonnet-body {
-        font-size: 1.3rem;
-        line-height: 1.5;
-    }
-
-    .sonnet {
-        max-width: 46rem;
-    }    
-}
-
-@media (min-width: 1024px) and (max-width: 1180px) {
-    .sonnet-title {
-        font-size: 38px;
-    }
-
-    .sonnet-body {
-        font-size: 1.45rem;
-        line-height: 1.5;
-    }
-
-    .sonnet {
-        max-width: 48rem;
-    }
-}
-
 @media (max-width: 640px) {
     .page {
         padding-left: 24px;
@@ -195,8 +148,9 @@
 
     .sonnet-body p {
         margin: 0;
-        padding-left: 1.25em;
+        padding-left: 0.25em;
         text-indent: -1.25em;
+        line-height: 1.3rem;
     }
 
     .sonnet-body p.sonnet-opening-line {
@@ -215,10 +169,6 @@
         text-indent: 0;
     }
 
-    /* ----------------------------------------
-    Couplet
-    ---------------------------------------- */
-
     .sonnet-couplet {
             margin-bottom: 2rem;
         }
@@ -234,7 +184,6 @@
         margin-right: 0.14em;
     }    
 
-    /* Add stanza spacing only between stanza containers */
     .sonnet-stanza + .sonnet-stanza,
     .sonnet-stanza + .sonnet-couplet,
     .sonnet-couplet + .sonnet-stanza {
