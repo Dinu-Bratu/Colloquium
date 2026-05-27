@@ -59,6 +59,10 @@
     display: none;
 }
 
+.muted {
+    color: var(--muted);
+}
+
 .nbsp {
     white-space: nowrap;
 }
@@ -130,6 +134,13 @@ p:last-child {
 /* =========================================================
    Footnotes
 ========================================================= */
+
+.footnote-poem {
+    font-style: italic;
+    color: var(--muted);
+    padding-left: 1.5rem;
+    padding-top: 0.3rem;
+}
 
 .footnote-ref {
     color: var(--accent);
@@ -285,7 +296,7 @@ header {
 }
 
 .dedication {
-    color: var(--article-text);
+    color: var(--muted);
     text-align: center;
     font-style: italic;
     line-height: 1.5em;
