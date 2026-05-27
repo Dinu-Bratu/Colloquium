@@ -280,6 +280,10 @@ header {
    Body
 ========================================================= */
 
+.scansion-line {
+    padding-left: 2.5em;
+}
+
 .dedication {
     color: var(--article-text);
     text-align: center;
@@ -406,6 +410,7 @@ main {
     text-align: center;
     font-style: italic;
     font-size: 17px;
+    letter-spacing: 0.035em;
 }
 
 .article-author::before {
