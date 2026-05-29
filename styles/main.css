@@ -59,6 +59,10 @@
     display: none;
 }
 
+.muted {
+    color: var(--muted);
+}
+
 .nbsp {
     white-space: nowrap;
 }
@@ -130,6 +134,13 @@ p:last-child {
 /* =========================================================
    Footnotes
 ========================================================= */
+
+.footnote-poem {
+    font-style: italic;
+    color: var(--muted);
+    padding-left: 2.5rem;
+    padding-top: 0.3rem;
+}
 
 .footnote-ref {
     color: var(--accent);
@@ -280,6 +291,18 @@ header {
    Body
 ========================================================= */
 
+.scansion-line {
+    padding-left: 2.5em;
+}
+
+.dedication {
+    color: var(--muted);
+    text-align: center;
+    font-style: italic;
+    line-height: 1.5em;
+    padding-top: 1em;
+}
+
 .contact-email {
     margin-top: 2em;
     text-align: center;
@@ -398,6 +421,7 @@ main {
     text-align: center;
     font-style: italic;
     font-size: 17px;
+    letter-spacing: 0.035em;
 }
 
 .article-author::before {
@@ -427,27 +451,26 @@ main {
 .article-provenance {
     color: var(--meta-area);
     text-align: left;
-    font-size: 16px
+    /* font-size: 16px; */
 }
 
 .article-version::before {
     color: var(--meta-area);
     content: "Version ";
-    font-size: inherit;
+    /* font-size: inherit; */
 }
 
 .poem-author::before {
     color: var(--meta-area);
     content: "Author: ";
-    font-size: inherit;
+    /* font-size: inherit; */
 }
 
 .article-provenance::before {
     color: var(--meta-area);
     content: "Provenance Token: ";
-    font-size: inherit;
+    /* font-size: inherit; */
 }
-
 
 .article-info {
     color: var(--meta-area);
@@ -462,12 +485,17 @@ main {
 
 /* Article Divider */
 
-.article-divider {
+.article-divider,
+.article-divider-inset {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 2em;
     margin-bottom: 3em;
+}
+
+.article-divider-inset {
+    margin-bottom: 1em;
 }
 
 .article-divider-line {
