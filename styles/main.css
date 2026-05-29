@@ -138,7 +138,7 @@ p:last-child {
 .footnote-poem {
     font-style: italic;
     color: var(--muted);
-    padding-left: 1.5rem;
+    padding-left: 2.5rem;
     padding-top: 0.3rem;
 }
 
