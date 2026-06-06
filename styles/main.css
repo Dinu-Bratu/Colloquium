@@ -790,7 +790,7 @@ p.article-tags-title {
 }
 
 /* =========================================================
-   Dormant Styles
+   Dormant & Draft-Mode Styles
 ========================================================= */
 
 .home-entry-dormant,
@@ -808,6 +808,16 @@ p.article-tags-title {
 .home-entry-dormant .chamber-entry-subtitle {
     opacity: 0.9;
 }
+
+.draft-mode {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+    margin-top: 0.75rem;
+    opacity: 0.8;
+}
+
+
 
 /* =========================================================
    Easter Egg
