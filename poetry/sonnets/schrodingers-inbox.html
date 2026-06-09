@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- '?v=hash' denotes a SHA-512 content-derived cache-busting token. -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -35,8 +36,16 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
 
-    <link rel="stylesheet" href="/styles/main.css?v=9B49323E">
+    <!-- Site styles -->
+    <link rel="stylesheet" href="styles/main.css?v=9B49323E">
     <link rel="stylesheet" href="/styles/sonnet.css?v=9216FD08">
+
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-BJZrYsOZd2J72vWWicxb8.js"></script>
+    <script>
+        window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+        plausible.init()
+    </script>
 </head>
 
 <body>
