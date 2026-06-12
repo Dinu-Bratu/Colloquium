@@ -959,7 +959,7 @@ p.article-tags-title {
 
 .motto-default,
 .motto-easter-egg {
-    transition: opacity 1200ms ease-in-out;
+    transition: opacity 1000ms ease-in-out;
 }
 
 .motto-easter-egg {

@@ -224,7 +224,7 @@ A SHA-512 hash is generated for the file, and the first eight characters of that
 For example:
 
 ```html
-<link rel="stylesheet" href="/styles/main.css?v=7A81E46B">
+<link rel="stylesheet" href="/styles/main.css?v=6CD80E3D">
 <script src="/js/easter-egg.js?v=9A17C2E4" defer></script>
 <img src="/images/colloquium-social-card.png?v=4A89B9AB" alt="">
 ```
