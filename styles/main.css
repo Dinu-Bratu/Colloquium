@@ -454,12 +454,21 @@ main {
     font-size: 16px;
 }
 
-.article-version,
-.poem-author,
-.article-provenance {
+.article-info {
     color: var(--meta-area);
     text-align: left;
-    /* font-size: 16px; */
+}
+
+.article-info p {
+    color: var(--meta-area);
+    margin: 0;
+    line-height: 1.4;
+    font-size: 16px;
+}
+
+.article-info p::before {
+    color: var(--meta-area);
+    font-size: inherit;
 }
 
 .article-version::before,
@@ -479,23 +488,6 @@ main {
 
 .article-provenance::before {
     content: "Provenance Token: ";
-}
-
-.article-info {
-    color: var(--meta-area);
-    text-align: left;
-}
-
-.article-info p {
-    color: var(--meta-area);
-    margin: 0;
-    line-height: 1.4;
-    font-size: 16px;
-}
-
-.article-info p::before {
-    color: var(--meta-area);
-    font-size: inherit;
 }
 
 /* Article Divider */
@@ -652,6 +644,106 @@ p.article-tags-title {
 .footer-separator {
     margin: 0 0.5em;
     color: var(--muted);
+}
+
+/* =========================================================
+   Lightbox Feature
+========================================================= */
+
+body.lightbox-open {
+    overflow: hidden;
+}
+
+.lightbox-trigger {
+    display: block;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.lightbox-trigger img {
+    display: block;
+}
+
+/* Remove mouse-click focus ring, keep keyboard focus behavior */
+.lightbox-trigger:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.lightbox-trigger:focus-visible {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 4px;
+}
+
+.lightbox-modal {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    max-width: 92vw;
+    max-height: 88vh;
+    overflow: visible;
+}
+
+.lightbox-modal-content {
+    position: relative;
+    padding: 0.25rem;
+    background: var(--page-bg, #f8f4e8);
+    border: 1px solid var(--rule, #c8b887);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.42);
+    box-sizing: border-box;
+    max-width: 92vw;
+    max-height: 88vh;
+    overflow: hidden;
+}
+
+.lightbox-modal img {
+    display: block;
+    max-width: calc(92vw - 0.5rem);
+    max-height: calc(88vh - 0.5rem);
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.lightbox-modal::backdrop {
+    background: rgba(0, 0, 0, 0.38);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -0.75rem;
+    right: -0.75rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    border: 1px solid var(--rule, #c8b887);
+    border-radius: 50%;
+    background: var(--page-bg, #f8f4e8);
+    color: var(--text-main, #222);
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.lightbox-close:focus:not(:focus-visible) {
+    outline: none;
+}
+
+@media (max-width: 640px) {
+    .lightbox-modal {
+        max-width: 98vw;
+        max-height: 94vh;
+    }
+
+    .lightbox-modal-content {
+        padding: 0.75rem;
+    }
+
+    .lightbox-modal img {
+        max-width: calc(98vw - 1.5rem);
+        max-height: calc(94vh - 1.5rem);
+    }
 }
 
 /* =========================================================

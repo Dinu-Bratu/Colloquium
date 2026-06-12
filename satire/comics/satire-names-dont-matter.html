@@ -46,6 +46,9 @@
     <link rel="stylesheet" href="/styles/main.css?v=9B49323E">
     <link rel="stylesheet" href="/styles/sonnet.css?v=9216FD08">
 
+    <!-- Site Functionality -->
+    <script src="/js/lightbox.js?v=D75A307D" defer></script>
+
     <!-- Privacy-friendly analytics by Plausible -->
     <script async src="https://plausible.io/js/pa-BJZrYsOZd2J72vWWicxb8.js"></script>
     <script>
@@ -78,10 +81,12 @@
                 </p>
 
                 <div class="sonnet-companion-image">
-                    <img
-                        src="/assets/images/comics/satire-names-dont-matter.png?v=D21541B6"
-                        alt="Satirical cartoon comparing increasingly chaotic filename conventions with orderly semantic version numbers, illustrating the consequences of ad hoc naming systems.">
-                        <p class="draft-mode">Draft Artwork</p>
+                    <button class="lightbox-trigger" type="button">
+                        <img
+                            src="/assets/images/comics/satire-names-dont-matter.png?v=D21541B6"
+                            alt="Satirical cartoon comparing increasingly chaotic filename conventions with orderly semantic version numbers, illustrating the consequences of ad hoc naming systems.">
+                            <p class="draft-mode">Draft Artwork</p>
+                    </button>
                 </div>
             
                 <div class="article-divider sonnet-divider" aria-hidden="true">
@@ -136,5 +141,11 @@
             </footer>
         </div>
     </div>
+    <dialog id="lightbox-modal" class="lightbox-modal">
+        <div class="lightbox-modal-content">
+            <button class="lightbox-close" type="button" aria-label="Close image viewer">×</button>
+            <img id="lightbox-image" src="" alt="">
+        </div>
+    </dialog>    
 </body>
 </html>
