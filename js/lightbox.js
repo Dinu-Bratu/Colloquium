@@ -8,9 +8,28 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
+    function getVisibleMastheadImage(clickedImage) {
+        const trigger = clickedImage.closest(".ee-trigger");
+
+        if (!trigger) {
+            return clickedImage;
+        }
+
+        const defaultImage = trigger.querySelector(".ee-logo-default");
+        const easterEggImage = trigger.querySelector(".ee-logo-easter-egg");
+
+        if (document.body.classList.contains("easter-egg-active") && easterEggImage) {
+            return easterEggImage;
+        }
+
+        return defaultImage || clickedImage;
+    }
+
     function openLightbox(image) {
-        modalImage.src = image.src;
-        modalImage.alt = image.alt || "";
+        const visibleImage = getVisibleMastheadImage(image);
+
+        modalImage.src = visibleImage.src;
+        modalImage.alt = visibleImage.alt || image.alt || "";
         modal.showModal();
     }
 
