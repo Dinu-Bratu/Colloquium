@@ -5,9 +5,9 @@
     if (!trigger || !easterEggLogo) return;
 
     const clsActive = "easter-egg-active";
-    const lingerDelayMs = 1200;
-    const lingerFadeMs = 1200;
-    const resetFadeMs = 1200;
+    const lingerDelayMs = 1000;
+    const lingerFadeMs = 1000;
+    const resetFadeMs = 1000;
 
     let mouseIsInsideLogo = false;
     let eggActive = false;

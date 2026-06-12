@@ -14,10 +14,11 @@
     <link rel="manifest" href="/site.webmanifest">
 
     <!-- Site styles -->
-    <link rel="stylesheet" href="/styles/main.css?v=9B49323E">
+    <link rel="stylesheet" href="/styles/main.css?v=7A81E46B">
     
     <!-- Site Functionality -->
-    <script src="/js/easter-egg.js?v=5BACC9AD" defer></script>
+    <script src="/js/easter-egg.js?v=7AF739C0" defer></script>
+    <script src="/js/lightbox.js?v=2CC3AD7B" defer></script>
 
     <!-- Privacy-friendly analytics by Plausible -->
     <script async src="https://plausible.io/js/pa-BJZrYsOZd2J72vWWicxb8.js"></script>
@@ -38,12 +39,11 @@
                     <span id="interior-logo-trigger"
                         class="ee-trigger">
                         <img
-                            class="ee-logo-default interior-logo"
+                            class="ee-logo-default interior-logo lightbox-image"
                             src="/images/logo-interior-default.png?v=7E741FDB"
                             alt="">
-
                         <img
-                            class="ee-logo-easter-egg interior-logo"
+                            class="ee-logo-easter-egg interior-logo lightbox-image"
                             src="/images/logo-interior-easter-egg.png?v=22C5F2AD"
                             alt="">
                     </span>
@@ -119,5 +119,9 @@
             </footer>
         </div>
     </div>
+    <dialog id="lightbox-modal" class="lightbox-modal">
+        <button class="lightbox-close" type="button" aria-label="Close image viewer">×</button>
+        <img id="lightbox-modal-image" src="" alt="">
+    </dialog>    
 </body>
 </html>

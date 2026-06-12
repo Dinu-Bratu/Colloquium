@@ -454,32 +454,6 @@ main {
     font-size: 16px;
 }
 
-.article-version
-.poem-author,
-.article-provenance {
-    color: var(--meta-area);
-    text-align: left;
-    /* font-size: 16px; */
-}
-
-.article-version::before {
-    color: var(--meta-area);
-    content: "Version ";
-    /* font-size: inherit; */
-}
-
-.poem-author::before {
-    color: var(--meta-area);
-    content: "Author: ";
-    /* font-size: inherit; */
-}
-
-.article-provenance::before {
-    color: var(--meta-area);
-    content: "Provenance Token: ";
-    /* font-size: inherit; */
-}
-
 .article-info {
     color: var(--meta-area);
     text-align: left;
@@ -489,6 +463,31 @@ main {
     color: var(--meta-area);
     margin: 0;
     line-height: 1.4;
+    font-size: 16px;
+}
+
+.article-info p::before {
+    color: var(--meta-area);
+    font-size: inherit;
+}
+
+.article-version::before,
+.poem-author::before,
+.article-provenance::before {
+    color: var(--meta-area);
+    font-size: inherit;
+}
+
+.article-version::before {
+    content: "Version ";
+}
+
+.poem-author::before {
+    content: "Author: ";
+}
+
+.article-provenance::before {
+    content: "Provenance Token: ";
 }
 
 /* Article Divider */
@@ -645,6 +644,91 @@ p.article-tags-title {
 .footer-separator {
     margin: 0 0.5em;
     color: var(--muted);
+}
+
+/* =========================================================
+   Lightbox Feature
+========================================================= */
+
+.lightbox-image {
+    cursor: pointer;
+}
+
+.lightbox-modal {
+    padding: 0.5rem;
+    border: 1px solid var(--rule);
+    background: rgba(248, 244, 232, 0.3);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+    max-width: 90vw;
+    max-height: 88vh;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.lightbox-modal::backdrop {
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.lightbox-modal img {
+    display: block;
+    max-width: calc(90vw - 1rem);
+    max-height: calc(88vh - 1rem);
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+
+    width: 2rem;
+    height: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 2px solid #d89b00;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    color: #000;
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1;
+
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    padding-left: 1px;
+}
+
+.lightbox-close:focus {
+    outline: none;
+}
+
+.lightbox-close:hover {
+    background: #fff;
+}
+
+@media (max-width: 640px) {
+    .lightbox-modal {
+        max-width: 94vw;
+        max-height: 86vh;
+        padding: 0.4rem;
+    }
+
+    .lightbox-modal img {
+        max-width: calc(94vw - 0.8rem);
+        max-height: calc(86vh - 0.8rem);
+    }
 }
 
 /* =========================================================
@@ -817,8 +901,6 @@ p.article-tags-title {
     opacity: 0.8;
 }
 
-
-
 /* =========================================================
    Easter Egg
 ========================================================= */
@@ -841,7 +923,7 @@ p.article-tags-title {
     inset: 0;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 1200ms ease-in-out;
+    transition: opacity 1000ms ease-in-out;
 }
 
 .easter-egg-active .ee-logo-easter-egg {
@@ -854,7 +936,7 @@ p.article-tags-title {
 
 .ee-motto-default,
 .ee-motto-easter-egg {
-    transition: opacity 1200ms ease-in-out;
+    transition: opacity 1000ms ease-in-out;
 }
 
 .ee-motto-easter-egg {

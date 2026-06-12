@@ -40,10 +40,11 @@
     <link rel="manifest" href="/site.webmanifest">
 
     <!-- Site styles -->
-    <link rel="stylesheet" href="/styles/main.css?v=9B49323E">
+    <link rel="stylesheet" href="/styles/main.css?v=7A81E46B">
 
     <!-- Site Functionality -->
-    <script src="/js/easter-egg.js?v=5BACC9AD" defer></script>
+    <script src="/js/easter-egg.js?v=7AF739C0" defer></script>
+    <script src="/js/lightbox.js?v=2CC3AD7B" defer></script>
 
     <!-- Privacy-friendly analytics by Plausible -->
     <script async src="https://plausible.io/js/pa-BJZrYsOZd2J72vWWicxb8.js"></script>
@@ -66,13 +67,12 @@
                         class="ee-trigger">
                         <img
                             id="masthead-logo-default"
-                            class="ee-logo-default masthead-logo"
+                            class="ee-logo-default masthead-logo lightbox-image"
                             src="/images/logo-default.png?v=FFB9F12F"
                             alt="">
-
                         <img
                             id="masthead-logo-easter-egg"
-                            class="ee-logo-easter-egg masthead-logo"
+                            class="ee-logo-easter-egg masthead-logo lightbox-image"
                             src="/images/logo-easter-egg.png?v=18B8BBFB"
                             alt="">
                     </span>
@@ -231,7 +231,6 @@
                             Editorial essays and civic reflections arranged by publication form.
                         </p>
                     </section>
-
                 </section>
             </main>
 
@@ -246,5 +245,11 @@
             </footer>
         </div>
     </div>
+    <dialog id="lightbox-modal" class="lightbox-modal">
+        <div class="lightbox-modal-content">
+            <button class="lightbox-close" type="button" aria-label="Close image viewer">×</button>
+            <img id="lightbox-modal-image" src="" alt="">
+        </div>
+    </dialog>
 </body>
 </html>
