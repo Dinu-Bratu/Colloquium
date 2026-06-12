@@ -1,46 +1,36 @@
 document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("lightbox-modal");
-    const modalImage = document.getElementById("lightbox-image");
+    const modalImage = document.getElementById("lightbox-modal-image");
     const closeButton = document.querySelector(".lightbox-close");
-    const triggers = document.querySelectorAll(".lightbox-trigger img");
+    const images = document.querySelectorAll(".lightbox-image");
 
-    if (!modal || !modalImage || !closeButton || triggers.length === 0) {
+    if (!modal || !modalImage || !closeButton || images.length === 0) {
         return;
     }
 
-    function openModal(image) {
+    function openLightbox(image) {
         modalImage.src = image.src;
         modalImage.alt = image.alt || "";
-        document.body.classList.add("lightbox-open");
         modal.showModal();
     }
 
-    function closeModal() {
+    function closeLightbox() {
         modal.close();
         modalImage.src = "";
         modalImage.alt = "";
-        document.body.classList.remove("lightbox-open");
     }
 
-    triggers.forEach((image) => {
-        image.parentElement.addEventListener("click", () => {
-            openModal(image);
+    images.forEach((image) => {
+        image.addEventListener("click", () => {
+            openLightbox(image);
         });
     });
 
-    closeButton.addEventListener("click", closeModal);
+    closeButton.addEventListener("click", closeLightbox);
 
     modal.addEventListener("click", (event) => {
-        const modalRect = modal.getBoundingClientRect();
-
-        const clickedInDialog =
-            event.clientX >= modalRect.left &&
-            event.clientX <= modalRect.right &&
-            event.clientY >= modalRect.top &&
-            event.clientY <= modalRect.bottom;
-
-        if (!clickedInDialog) {
-            closeModal();
+        if (event.target === modal) {
+            closeLightbox();
         }
     });
 });

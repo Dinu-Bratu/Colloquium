@@ -650,65 +650,30 @@ p.article-tags-title {
    Lightbox Feature
 ========================================================= */
 
-body.lightbox-open {
-    overflow: hidden;
-}
-
-.lightbox-trigger {
-    display: block;
-    padding: 0;
-    margin: 0;
-    border: 0;
-    background: transparent;
+.lightbox-image {
     cursor: pointer;
 }
 
-.lightbox-trigger img {
-    display: block;
-}
-
-/* Remove mouse-click focus ring, keep keyboard focus behavior */
-.lightbox-trigger:focus:not(:focus-visible) {
-    outline: none;
-}
-
-.lightbox-trigger:focus-visible {
-    outline: 2px solid var(--accent-gold);
-    outline-offset: 4px;
-}
-
 .lightbox-modal {
-    padding: 0;
-    border: 0;
-    background: transparent;
+    padding: 0.75rem;
+    border: 1px solid var(--rule);
+    background: var(--background);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
     max-width: 92vw;
-    max-height: 88vh;
-    overflow: visible;
+    max-height: 92vh;
 }
 
-.lightbox-modal-content {
-    position: relative;
-    padding: 0.25rem;
-    background: var(--page-bg, #f8f4e8);
-    border: 1px solid var(--rule, #c8b887);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.42);
-    box-sizing: border-box;
-    max-width: 92vw;
-    max-height: 88vh;
-    overflow: hidden;
+.lightbox-modal::backdrop {
+    background: rgba(0, 0, 0, 0.35);
 }
 
 .lightbox-modal img {
     display: block;
-    max-width: calc(92vw - 0.5rem);
-    max-height: calc(88vh - 0.5rem);
+    max-width: calc(92vw - 1.5rem);
+    max-height: calc(92vh - 1.5rem);
     width: auto;
     height: auto;
     object-fit: contain;
-}
-
-.lightbox-modal::backdrop {
-    background: rgba(0, 0, 0, 0.38);
 }
 
 .lightbox-close {
@@ -717,33 +682,17 @@ body.lightbox-open {
     right: -0.75rem;
     width: 1.75rem;
     height: 1.75rem;
-    border: 1px solid var(--rule, #c8b887);
+    border: 1px solid var(--rule);
     border-radius: 50%;
-    background: var(--page-bg, #f8f4e8);
-    color: var(--text-main, #222);
+    background: var(--background);
+    color: var(--text-main);
     font-size: 1.25rem;
     line-height: 1;
     cursor: pointer;
 }
 
-.lightbox-close:focus:not(:focus-visible) {
+.lightbox-image:focus {
     outline: none;
-}
-
-@media (max-width: 640px) {
-    .lightbox-modal {
-        max-width: 98vw;
-        max-height: 94vh;
-    }
-
-    .lightbox-modal-content {
-        padding: 0.75rem;
-    }
-
-    .lightbox-modal img {
-        max-width: calc(98vw - 1.5rem);
-        max-height: calc(94vh - 1.5rem);
-    }
 }
 
 /* =========================================================
