@@ -454,7 +454,7 @@ main {
     font-size: 16px;
 }
 
-.article-version
+.article-version,
 .poem-author,
 .article-provenance {
     color: var(--meta-area);
@@ -462,22 +462,23 @@ main {
     /* font-size: 16px; */
 }
 
-.article-version::before {
+.article-version::before,
+.poem-author::before,
+.article-provenance::before {
     color: var(--meta-area);
+    font-size: inherit;
+}
+
+.article-version::before {
     content: "Version ";
-    /* font-size: inherit; */
 }
 
 .poem-author::before {
-    color: var(--meta-area);
     content: "Author: ";
-    /* font-size: inherit; */
 }
 
 .article-provenance::before {
-    color: var(--meta-area);
     content: "Provenance Token: ";
-    /* font-size: inherit; */
 }
 
 .article-info {
@@ -489,6 +490,12 @@ main {
     color: var(--meta-area);
     margin: 0;
     line-height: 1.4;
+    font-size: 16px;
+}
+
+.article-info p::before {
+    color: var(--meta-area);
+    font-size: inherit;
 }
 
 /* Article Divider */
