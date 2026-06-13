@@ -40,6 +40,10 @@
 
     <!-- Site styles -->
     <link rel="stylesheet" href="/styles/main.css?v=6CD80E3D">
+    <link rel="stylesheet" href="/styles/reference-lightbox.css?v=aaaa">
+
+    <!-- Site Functionality -->
+    <script src="/js/reference-lightbox.js?v=12345678a" defer></script>
 
     <!-- Privacy-friendly analytics by Plausible -->
     <script async src="https://plausible.io/js/pa-BJZrYsOZd2J72vWWicxb8.js"></script>
@@ -92,7 +96,12 @@
                         </p>
 
                         <p>
-                            Nick Bostrom’s seminal paper <em>“Are You Living in a Computer Simulation?”</em><a href="#footnote-1" id="ref-1" class="footnote-ref" title="footnote"><sup>[1]</sup></a> belongs primarily to the first domain. It is a work of careful philosophical reasoning, structured around what he presents as a trilemma: three propositions at least one of which must be true—that humanity is unlikely to reach a posthuman stage; that posthuman civilizations are unlikely to run significant numbers of ancestor simulations; or that “we are almost certainly living in a computer simulation.” If one accepts the logic of the framework, the third possibility takes on unusual force.
+                            Nick Bostrom’s seminal paper <em>“Are You Living in a Computer Simulation?”</em><a href="#footnote-1" id="ref-1" class="footnote-ref" title="footnote"><sup>[1]</sup></a> belongs primarily to the first domain. It is a work of careful philosophical reasoning, structured around what he presents as a trilemma: three propositions at least one of which must be true—that humanity is unlikely to reach a posthuman stage; that posthuman civilizations are unlikely to run significant numbers of ancestor simulations; or that “we are almost certainly living in a computer simulation.” If one accepts the logic of the framework, 
+                            <a 
+                                href="/reference/bostrom-trilemma.html"
+                                class="reference-link"
+                                data-reference="/reference/bostrom-trilemma.html">
+                                the third possibility</a> takes on unusual force.
                         </p>
 
                         <p>
@@ -532,6 +541,18 @@
             </footer>
         </div>
     </div>
+    <dialog id="reference-lightbox" class="reference-lightbox">
+        <button
+            class="reference-lightbox-close"
+            type="button"
+            aria-label="Close reference">
+            ×
+        </button>
+        <div
+            id="reference-lightbox-content"
+            class="reference-lightbox-content">
+        </div>
+    </dialog>
 </body>
 </html>
 

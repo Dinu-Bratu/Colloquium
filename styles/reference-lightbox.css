@@ -6,23 +6,44 @@
     --reference-lightbox-opacity: 1.00;
     --reference-lightbox-max-height: 72vh;
     --reference-lightbox-width: 700px;
+    --reference-lightbox-top-clearance: 2.75rem;
 }
 
 .reference-lightbox {
     position: fixed;
     top: 8vh;
-    left: 50%;
-    transform: translateX(-50%);
+    left: var(--reference-lightbox-left, 50%);
 
-    width: min(var(--reference-lightbox-width), calc(100vw - 2rem));
+    width: var(
+        --reference-lightbox-calculated-width,
+        min(700px, calc(100vw - 2rem))
+    );
+
     max-height: var(--reference-lightbox-max-height);
 
-    padding: 1.25rem;
+    padding: 2.25rem;
+    padding-top: 0.5rem;
+
     border: 1px solid var(--rule);
-    background: rgba(248, 244, 232, var(--reference-lightbox-opacity));
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+
+    background: rgba(
+        248,
+        244,
+        232,
+        var(--reference-lightbox-opacity)
+    );
+
+    box-shadow: 0 12px 40px rgba(
+        0,
+        0,
+        0,
+        0.45
+    );
+
     overflow: hidden;
     box-sizing: border-box;
+
+    margin: 0;
 }
 
 .reference-lightbox::backdrop {
@@ -30,14 +51,14 @@
 }
 
 .reference-lightbox-content {
-    max-height: calc(var(--reference-lightbox-max-height) - 2.5rem);
-    overflow-y: auto;
-}
+    margin-top: var(--reference-lightbox-top-clearance);
 
-.reference-lightbox-content {
-    max-height: calc(var(--reference-lightbox-max-height) - 2.5rem);
+    max-height: calc(
+        var(--reference-lightbox-max-height) - var(--reference-lightbox-top-clearance) - 2.5rem
+    );
+
     overflow-y: auto;
-    /* text-align: left;*/ 
+    text-align: left;
 }
 
 .reference-lightbox-close {
@@ -83,14 +104,37 @@
 }
 
 .reference-title {
-    margin-top: 0;
     margin-bottom: 1rem;
     padding-right: 2.5rem;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 20px;
+    font-size: 19px;
+    font-weight: normal;
 }
 
 .reference-content p {
     margin: 0;
     line-height: 1.6;
+    padding-bottom: 1rem;
+}
+
+/* Reference source, author, work, and location */
+
+.reference-source,
+.reference-author {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #666;
+}
+
+.reference-work {
+    margin-top: 0.25rem;
+    font-style: italic;
+    font-size: 1.25rem;
+}
+
+.reference-location {
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    font-size: 1.15rem;
 }

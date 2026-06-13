@@ -38,6 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error(error);
         }
 
+        positionReferenceLightbox();
+
         modal.showModal();
         preserveScrollPosition(scrollY);
     }
@@ -51,6 +53,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
         content.innerHTML = "";
         preserveScrollPosition(scrollY);
+    }
+
+    function positionReferenceLightbox() {
+        const articleColumn = document.querySelector("main");
+
+        if (!articleColumn) {
+            modal.style.setProperty("--reference-lightbox-left", "1rem");
+            modal.style.setProperty("--reference-lightbox-calculated-width", "calc(100vw - 2rem)");
+            return;
+        }
+
+        const rect = articleColumn.getBoundingClientRect();
+        const viewportPadding = 16;
+
+        const left = Math.max(rect.left, viewportPadding);
+        const width = Math.min(rect.width, window.innerWidth - (viewportPadding * 2));
+
+        modal.style.setProperty("--reference-lightbox-left", `${left}px`);
+        modal.style.setProperty("--reference-lightbox-calculated-width", `${width}px`);
     }
 
     links.forEach((link) => {
