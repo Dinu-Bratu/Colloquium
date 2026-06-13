@@ -40,6 +40,10 @@
 
     <!-- Site styles -->
     <link rel="stylesheet" href="/styles/main.css?v=6CD80E3D">
+    <link rel="stylesheet" href="/styles/reference-lightbox.css?v=aaaa">
+
+    <!-- Site Functionality -->
+    <script src="/js/reference-lightbox.js?v=12345678a" defer></script>
 
     <!-- Privacy-friendly analytics by Plausible -->
     <script async src="https://plausible.io/js/pa-BJZrYsOZd2J72vWWicxb8.js"></script>
@@ -118,7 +122,14 @@
                         </p>
 
                         <p>
-                            That is why grassroots efforts like the Convention of States Project matter. Using Article V of the Constitution, the people—through their state legislatures—can bypass Congress to propose amendments that require a balanced budget, impose spending restraints, and restore the constitutional architecture—through additional measures like term-limits for both congress and the judiciary—that once safeguarded our republic. If we do not act soon, the debt burden now measured in trillions will crush this generation—and leave only wreckage for those who follow.
+                            That is why grassroots efforts like the Convention of States Project matter. Using 
+                            <a
+                                href="/reference/article-v.html"
+                                class="reference-link"
+                                data-reference="/reference/article-v.html">
+                                Article V of the Constitution</a>, this initiative empowers states to propose amendments that can restore fiscal responsibility, create term limits for the legislative and judicial branches, and limit federal overreach. Citizens are encouraged to support this movement, urging their state legislatures to join the call for a convention. Through collective action, we can steer our nation away from fiscal peril and toward a sustainable future.
+                        </p>
+                            Article V of the Constitution, the people—through their state legislatures—can bypass Congress to propose amendments that require a balanced budget, impose spending restraints, and restore the constitutional architecture—through additional measures like term-limits for both congress and the judiciary—that once safeguarded our republic. If we do not act soon, the debt burden now measured in trillions will crush this generation—and leave only wreckage for those who follow.
                         </p>
 
                         <p>
@@ -177,6 +188,18 @@
             </footer>
         </div>
     </div>
+    <dialog id="reference-lightbox" class="reference-lightbox">
+        <button
+            class="reference-lightbox-close"
+            type="button"
+            aria-label="Close reference">
+            ×
+        </button>
+        <div
+            id="reference-lightbox-content"
+            class="reference-lightbox-content">
+        </div>
+    </dialog>
 </body>
 </html>
 

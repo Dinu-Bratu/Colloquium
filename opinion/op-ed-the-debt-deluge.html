@@ -40,6 +40,10 @@
 
     <!-- Site styles -->
     <link rel="stylesheet" href="/styles/main.css?v=6CD80E3D">
+    <link rel="stylesheet" href="/styles/reference-lightbox.css?v=aaaa">
+
+    <!-- Site Functionality -->
+    <script src="/js/reference-lightbox.js?v=12345678a" defer></script>
 
     <!-- Privacy-friendly analytics by Plausible -->
     <script async src="https://plausible.io/js/pa-BJZrYsOZd2J72vWWicxb8.js"></script>
@@ -124,7 +128,11 @@
                         <h2 class="article-subtitle">Call to Action: Embracing the Convention of States Project</span></h2>
 
                         <p>
-                            Because our elected representatives and the executive branch are unwilling to confront the nation’s escalating spending and debt crisis, the imperative for action has never been more pressing. A balanced budget amendment enshrined in the Constitution emerges as the only solution—and the Convention of States Project presents the most viable path forward. By leveraging Article V of the Constitution, this initiative empowers states to propose amendments that can restore fiscal responsibility, create term limits for the legislative and judicial branches, and limit federal overreach. Citizens are encouraged to support this movement, urging their state legislatures to join the call for a convention. Through collective action, we can steer our nation away from fiscal peril and toward a sustainable future.
+                            Because our elected representatives and the executive branch are unwilling to confront the nation’s escalating spending and debt crisis, the imperative for action has never been more pressing. A balanced budget amendment enshrined in the Constitution emerges as the only solution—and the Convention of States Project presents the most viable path forward. By leveraging 
+                            <a href="/reference/article-v.html"
+                                class="reference-link"
+                                data-reference="/reference/article-v.html">
+                                Article V of the Constitution</a>, this initiative empowers states to propose amendments that can restore fiscal responsibility, create term limits for the legislative and judicial branches, and limit federal overreach. Citizens are encouraged to support this movement, urging their state legislatures to join the call for a convention. Through collective action, we can steer our nation away from fiscal peril and toward a sustainable future.
                         </p>
 
                     </section>
@@ -177,6 +185,18 @@
             </footer>
         </div>
     </div>
+    <dialog id="reference-lightbox" class="reference-lightbox">
+        <button
+            class="reference-lightbox-close"
+            type="button"
+            aria-label="Close reference">
+            ×
+        </button>
+        <div
+            id="reference-lightbox-content"
+            class="reference-lightbox-content">
+        </div>
+    </dialog>
 </body>
 </html>
 
