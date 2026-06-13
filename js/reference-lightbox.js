@@ -18,6 +18,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    function trackReferenceEvent(link) {
+        const eventName = link.dataset.referenceEvent;
+
+        if (eventName && window.umami) {
+            window.umami.track(eventName);
+        }
+    }
+
     async function openReference(referenceUrl) {
         const scrollY = window.scrollY;
 
@@ -77,6 +85,9 @@ document.addEventListener("DOMContentLoaded", () => {
     links.forEach((link) => {
         link.addEventListener("click", (event) => {
             event.preventDefault();
+            event.stopPropagation();
+
+            trackReferenceEvent(link);
             openReference(link.dataset.reference);
         });
     });
