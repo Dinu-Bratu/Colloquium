@@ -21,8 +21,10 @@
 
     max-height: var(--reference-lightbox-max-height);
 
-    padding: 2.25rem;
     padding-top: 0.5rem;
+    padding-bottom: 2.25rem;
+    padding-left: 2.25rem;
+    padding-right: 1.5rem;
 
     border: 1px solid var(--rule);
 
@@ -58,6 +60,9 @@
     );
 
     overflow-y: auto;
+    padding-right: 1rem;
+    box-sizing: border-box;
+
     text-align: left;
 }
 
