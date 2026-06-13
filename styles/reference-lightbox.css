@@ -1,0 +1,96 @@
+/* =========================================================
+   Reference Document + Lightbox for Reference Documents
+========================================================= */
+
+:root {
+    --reference-lightbox-opacity: 1.00;
+    --reference-lightbox-max-height: 72vh;
+    --reference-lightbox-width: 700px;
+}
+
+.reference-lightbox {
+    position: fixed;
+    top: 8vh;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: min(var(--reference-lightbox-width), calc(100vw - 2rem));
+    max-height: var(--reference-lightbox-max-height);
+
+    padding: 1.25rem;
+    border: 1px solid var(--rule);
+    background: rgba(248, 244, 232, var(--reference-lightbox-opacity));
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.reference-lightbox::backdrop {
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.reference-lightbox-content {
+    max-height: calc(var(--reference-lightbox-max-height) - 2.5rem);
+    overflow-y: auto;
+}
+
+.reference-lightbox-content {
+    max-height: calc(var(--reference-lightbox-max-height) - 2.5rem);
+    overflow-y: auto;
+    /* text-align: left;*/ 
+}
+
+.reference-lightbox-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+
+    width: 2rem;
+    height: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 0 0 1px;
+
+    border: 2px solid #d89b00;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.95);
+    color: #000;
+
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1;
+
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.reference-lightbox-close:hover {
+    background: #fff;
+}
+
+.reference-lightbox-close:focus {
+    outline: none;
+}
+
+.reference-document {
+    max-width: 60rem;
+}
+
+.reference-title {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-right: 2.5rem;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+}
+
+.reference-content p {
+    margin: 0;
+    line-height: 1.6;
+}
