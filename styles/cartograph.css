@@ -1,0 +1,141 @@
+/* ----------------------------------------
+   Cartograph Structure
+---------------------------------------- */
+
+.cartograph {
+    max-width: 42rem;
+    margin: 0 auto;
+    padding-left: 1.15rem;
+}
+
+.cartograph-header {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.cartograph-title {
+    color: var(--article-title);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: 0.045rem;
+    line-height: 1.15;
+    text-align: center;
+    padding-top: 1.75em;
+    padding-bottom: 0.3em;
+}
+
+/* ----------------------------------------
+   Cartograph Body
+---------------------------------------- */
+
+.cartograph-body {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.0rem;
+    font-size: 1.2rem;
+}
+
+.cartograph-body p {
+    margin: 0;
+    padding-left: 1.25em;
+    text-indent: -1.25em;
+    line-height: 1.78rem;
+}
+
+.cartograph-paragraph p {
+    margin-top: 1.4rem;;
+    padding-left: 0;
+    text-indent: 0;
+    line-height: 1.78rem;
+}
+
+.cartograph-stanza,
+.cartograph-couplet {
+    position: relative;
+    display: flow-root;
+}
+
+.cartograph-stanza + .cartograph-stanza,
+.cartograph-stanza + .cartograph-couplet,
+.cartograph-couplet + .cartograph-stanza {
+    margin-top: 1.4rem;
+}
+
+/* ----------------------------------------
+   Cartograph Companion Region
+---------------------------------------- */
+
+.cartograph-companion {
+    width: 100%;
+    max-width: 42rem;
+    margin: 2.5rem auto 0;
+}
+
+.cartograph-meta {
+    margin: 0 0 1.25rem;
+}
+
+.cartograph-companion-image {
+    margin: 0;
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.cartograph-companion-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* ----------------------------------------
+   Cartograph Divider Line
+---------------------------------------- */
+
+.cartograph-divider {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+/* ----------------------------------------
+   Mobile Cartograph Adjustments
+---------------------------------------- */
+
+@media (max-width: 440px) {
+    .page {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .cartograph-body {
+        font-size: 0.9rem;
+        line-height: 1.42;
+    }
+
+    .cartograph-body p {
+        margin: 0;
+        padding-left: 0.25em;
+        text-indent: -1.25em;
+        line-height: 1.3rem;
+    }
+
+    .cartograph-stanza-opening {
+        min-height: auto;
+        padding-left: 0;
+        text-indent: 0;
+    }
+
+    .cartograph-couplet {
+            margin-bottom: 2rem;
+        }
+
+    .cartograph-couplet p {
+            margin-left: 1rem;
+        }
+
+    .cartograph-stanza + .cartograph-stanza,
+    .cartograph-stanza + .cartograph-couplet,
+    .cartograph-couplet + .cartograph-stanza {
+        margin-top: 0.7rem;
+    }
+}
